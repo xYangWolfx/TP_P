@@ -6,5 +6,6 @@
 #define SEMAFOROTP_MENU_H
 
 void displayMenu(gameInfo *info);
+void displayTurnsMenu(gameInfo *info);
 
 #endif //SEMAFOROTP_MENU_H

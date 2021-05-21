@@ -5,6 +5,7 @@
 #include <stdio.h>
 
 #include "../headers/game.h"
+#include "../headers/play.h"
 
 void displayPlayMenu(gameInfo *info) {
     int gameType;
@@ -52,4 +53,27 @@ void displayMenu(gameInfo *info) {
             displayMenu(info);
             break;
     }
+}
+
+void displayTurnsMenu(gameInfo *info){
+    int choice;
+
+    printf("Vez do jogador %c\nSelecione a sua jogada:\n 1- Colocar cor\n 2- Colocar pedra\n 3- Inserir nova linha\n 4- Inserir nova coluna\n", info->player);
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            makePlayChangeColor(info);
+            break;
+        case 2:
+            makePlayPutStone(info);
+            break;
+        case 3:
+            makePlayAddLine(info);
+            break;
+        case 4:
+            makePlayAddColumn(info);
+            break;
+    }
+
 }

@@ -62,10 +62,10 @@ RM = /home/miguel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/miguel/CLionProjects/semaforotp
+CMAKE_SOURCE_DIR = /home/miguel/CLionProjects/tpSemaforo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/miguel/CLionProjects/semaforotp/cmake-build-debug
+CMAKE_BINARY_DIR = /home/miguel/CLionProjects/tpSemaforo/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/semaforotp.dir/depend.make
@@ -78,107 +78,107 @@ include CMakeFiles/semaforotp.dir/flags.make
 
 CMakeFiles/semaforotp.dir/sources/main.c.o: CMakeFiles/semaforotp.dir/flags.make
 CMakeFiles/semaforotp.dir/sources/main.c.o: ../sources/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/semaforotp.dir/sources/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/main.c.o -c /home/miguel/CLionProjects/semaforotp/sources/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/semaforotp.dir/sources/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/main.c.o -c /home/miguel/CLionProjects/tpSemaforo/sources/main.c
 
 CMakeFiles/semaforotp.dir/sources/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/semaforotp.dir/sources/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/semaforotp/sources/main.c > CMakeFiles/semaforotp.dir/sources/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/tpSemaforo/sources/main.c > CMakeFiles/semaforotp.dir/sources/main.c.i
 
 CMakeFiles/semaforotp.dir/sources/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/semaforotp.dir/sources/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/semaforotp/sources/main.c -o CMakeFiles/semaforotp.dir/sources/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/tpSemaforo/sources/main.c -o CMakeFiles/semaforotp.dir/sources/main.c.s
 
 CMakeFiles/semaforotp.dir/sources/board.c.o: CMakeFiles/semaforotp.dir/flags.make
 CMakeFiles/semaforotp.dir/sources/board.c.o: ../sources/board.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/semaforotp.dir/sources/board.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/board.c.o -c /home/miguel/CLionProjects/semaforotp/sources/board.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/semaforotp.dir/sources/board.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/board.c.o -c /home/miguel/CLionProjects/tpSemaforo/sources/board.c
 
 CMakeFiles/semaforotp.dir/sources/board.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/semaforotp.dir/sources/board.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/semaforotp/sources/board.c > CMakeFiles/semaforotp.dir/sources/board.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/tpSemaforo/sources/board.c > CMakeFiles/semaforotp.dir/sources/board.c.i
 
 CMakeFiles/semaforotp.dir/sources/board.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/semaforotp.dir/sources/board.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/semaforotp/sources/board.c -o CMakeFiles/semaforotp.dir/sources/board.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/tpSemaforo/sources/board.c -o CMakeFiles/semaforotp.dir/sources/board.c.s
 
 CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o: CMakeFiles/semaforotp.dir/flags.make
 CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o: ../sources/boardAlloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o -c /home/miguel/CLionProjects/semaforotp/sources/boardAlloc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o -c /home/miguel/CLionProjects/tpSemaforo/sources/boardAlloc.c
 
 CMakeFiles/semaforotp.dir/sources/boardAlloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/semaforotp.dir/sources/boardAlloc.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/semaforotp/sources/boardAlloc.c > CMakeFiles/semaforotp.dir/sources/boardAlloc.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/tpSemaforo/sources/boardAlloc.c > CMakeFiles/semaforotp.dir/sources/boardAlloc.c.i
 
 CMakeFiles/semaforotp.dir/sources/boardAlloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/semaforotp.dir/sources/boardAlloc.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/semaforotp/sources/boardAlloc.c -o CMakeFiles/semaforotp.dir/sources/boardAlloc.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/tpSemaforo/sources/boardAlloc.c -o CMakeFiles/semaforotp.dir/sources/boardAlloc.c.s
 
 CMakeFiles/semaforotp.dir/sources/game.c.o: CMakeFiles/semaforotp.dir/flags.make
 CMakeFiles/semaforotp.dir/sources/game.c.o: ../sources/game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/semaforotp.dir/sources/game.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/game.c.o -c /home/miguel/CLionProjects/semaforotp/sources/game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/semaforotp.dir/sources/game.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/game.c.o -c /home/miguel/CLionProjects/tpSemaforo/sources/game.c
 
 CMakeFiles/semaforotp.dir/sources/game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/semaforotp.dir/sources/game.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/semaforotp/sources/game.c > CMakeFiles/semaforotp.dir/sources/game.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/tpSemaforo/sources/game.c > CMakeFiles/semaforotp.dir/sources/game.c.i
 
 CMakeFiles/semaforotp.dir/sources/game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/semaforotp.dir/sources/game.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/semaforotp/sources/game.c -o CMakeFiles/semaforotp.dir/sources/game.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/tpSemaforo/sources/game.c -o CMakeFiles/semaforotp.dir/sources/game.c.s
 
 CMakeFiles/semaforotp.dir/sources/play.c.o: CMakeFiles/semaforotp.dir/flags.make
 CMakeFiles/semaforotp.dir/sources/play.c.o: ../sources/play.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/semaforotp.dir/sources/play.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/play.c.o -c /home/miguel/CLionProjects/semaforotp/sources/play.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/semaforotp.dir/sources/play.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/play.c.o -c /home/miguel/CLionProjects/tpSemaforo/sources/play.c
 
 CMakeFiles/semaforotp.dir/sources/play.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/semaforotp.dir/sources/play.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/semaforotp/sources/play.c > CMakeFiles/semaforotp.dir/sources/play.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/tpSemaforo/sources/play.c > CMakeFiles/semaforotp.dir/sources/play.c.i
 
 CMakeFiles/semaforotp.dir/sources/play.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/semaforotp.dir/sources/play.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/semaforotp/sources/play.c -o CMakeFiles/semaforotp.dir/sources/play.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/tpSemaforo/sources/play.c -o CMakeFiles/semaforotp.dir/sources/play.c.s
 
 CMakeFiles/semaforotp.dir/sources/playMenu.c.o: CMakeFiles/semaforotp.dir/flags.make
 CMakeFiles/semaforotp.dir/sources/playMenu.c.o: ../sources/playMenu.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/semaforotp.dir/sources/playMenu.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/playMenu.c.o -c /home/miguel/CLionProjects/semaforotp/sources/playMenu.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/semaforotp.dir/sources/playMenu.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/playMenu.c.o -c /home/miguel/CLionProjects/tpSemaforo/sources/playMenu.c
 
 CMakeFiles/semaforotp.dir/sources/playMenu.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/semaforotp.dir/sources/playMenu.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/semaforotp/sources/playMenu.c > CMakeFiles/semaforotp.dir/sources/playMenu.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/tpSemaforo/sources/playMenu.c > CMakeFiles/semaforotp.dir/sources/playMenu.c.i
 
 CMakeFiles/semaforotp.dir/sources/playMenu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/semaforotp.dir/sources/playMenu.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/semaforotp/sources/playMenu.c -o CMakeFiles/semaforotp.dir/sources/playMenu.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/tpSemaforo/sources/playMenu.c -o CMakeFiles/semaforotp.dir/sources/playMenu.c.s
 
 CMakeFiles/semaforotp.dir/sources/selectMenu.c.o: CMakeFiles/semaforotp.dir/flags.make
 CMakeFiles/semaforotp.dir/sources/selectMenu.c.o: ../sources/selectMenu.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/semaforotp.dir/sources/selectMenu.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/selectMenu.c.o -c /home/miguel/CLionProjects/semaforotp/sources/selectMenu.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/semaforotp.dir/sources/selectMenu.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/selectMenu.c.o -c /home/miguel/CLionProjects/tpSemaforo/sources/selectMenu.c
 
 CMakeFiles/semaforotp.dir/sources/selectMenu.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/semaforotp.dir/sources/selectMenu.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/semaforotp/sources/selectMenu.c > CMakeFiles/semaforotp.dir/sources/selectMenu.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/tpSemaforo/sources/selectMenu.c > CMakeFiles/semaforotp.dir/sources/selectMenu.c.i
 
 CMakeFiles/semaforotp.dir/sources/selectMenu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/semaforotp.dir/sources/selectMenu.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/semaforotp/sources/selectMenu.c -o CMakeFiles/semaforotp.dir/sources/selectMenu.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/tpSemaforo/sources/selectMenu.c -o CMakeFiles/semaforotp.dir/sources/selectMenu.c.s
 
 CMakeFiles/semaforotp.dir/sources/utils.c.o: CMakeFiles/semaforotp.dir/flags.make
 CMakeFiles/semaforotp.dir/sources/utils.c.o: ../sources/utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/semaforotp.dir/sources/utils.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/utils.c.o -c /home/miguel/CLionProjects/semaforotp/sources/utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/semaforotp.dir/sources/utils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/semaforotp.dir/sources/utils.c.o -c /home/miguel/CLionProjects/tpSemaforo/sources/utils.c
 
 CMakeFiles/semaforotp.dir/sources/utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/semaforotp.dir/sources/utils.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/semaforotp/sources/utils.c > CMakeFiles/semaforotp.dir/sources/utils.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/miguel/CLionProjects/tpSemaforo/sources/utils.c > CMakeFiles/semaforotp.dir/sources/utils.c.i
 
 CMakeFiles/semaforotp.dir/sources/utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/semaforotp.dir/sources/utils.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/semaforotp/sources/utils.c -o CMakeFiles/semaforotp.dir/sources/utils.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/miguel/CLionProjects/tpSemaforo/sources/utils.c -o CMakeFiles/semaforotp.dir/sources/utils.c.s
 
 # Object files for target semaforotp
 semaforotp_OBJECTS = \
@@ -204,7 +204,7 @@ semaforotp: CMakeFiles/semaforotp.dir/sources/selectMenu.c.o
 semaforotp: CMakeFiles/semaforotp.dir/sources/utils.c.o
 semaforotp: CMakeFiles/semaforotp.dir/build.make
 semaforotp: CMakeFiles/semaforotp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable semaforotp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable semaforotp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/semaforotp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -217,6 +217,6 @@ CMakeFiles/semaforotp.dir/clean:
 .PHONY : CMakeFiles/semaforotp.dir/clean
 
 CMakeFiles/semaforotp.dir/depend:
-	cd /home/miguel/CLionProjects/semaforotp/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miguel/CLionProjects/semaforotp /home/miguel/CLionProjects/semaforotp /home/miguel/CLionProjects/semaforotp/cmake-build-debug /home/miguel/CLionProjects/semaforotp/cmake-build-debug /home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles/semaforotp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/miguel/CLionProjects/tpSemaforo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miguel/CLionProjects/tpSemaforo /home/miguel/CLionProjects/tpSemaforo /home/miguel/CLionProjects/tpSemaforo/cmake-build-debug /home/miguel/CLionProjects/tpSemaforo/cmake-build-debug /home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/semaforotp.dir/depend
 

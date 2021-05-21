@@ -1,3 +1,3 @@
-/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/miguel/CLionProjects/semaforotp/cmake-build-debug/CMakeFiles/semaforotp.dir
+/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir

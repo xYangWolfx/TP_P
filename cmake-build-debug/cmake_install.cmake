@@ -1,4 +1,4 @@
-# Install script for directory: /home/miguel/CLionProjects/semaforotp
+# Install script for directory: /home/miguel/CLionProjects/tpSemaforo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/miguel/CLionProjects/semaforotp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

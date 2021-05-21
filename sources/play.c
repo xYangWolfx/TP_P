@@ -30,23 +30,75 @@ void makePlayChangeColor(gameInfo *info){
 void makePlayPutStone(gameInfo *info){
     int line, column;
 
-    printf("introduza uma linha:\n");
-    scanf("%d", &line);
+    if (info->player == 'A'){
+        if (info->stone[0] < 1){
+            printf("introduza uma linha:\n");
+            scanf("%d", &line);
 
-    printf("introduza uma coluna:\n");
-    scanf("%d", &column);
+            printf("introduza uma coluna:\n");
+            scanf("%d", &column);
 
-    if (info->board[line-1][column-1] != 0){
-        printf("\nJogada não é válida!\nPor favor insira nova posição!\n");
-    } else if(info->board[line-1][column-1] == 0){
-        info->board[line-1][column-1] = 4;
+            if (info->board[line-1][column-1] != 0){
+                printf("\nJogada não é válida!\nPor favor insira nova posição!\n");
+            } else if(info->board[line-1][column-1] == 0){
+                info->board[line-1][column-1] = 4;
+                ++info->stone[0];
+            }
+        } else{
+            printf("Jogada inválida, número de pedras excedido!\n");
+        }
+    } else if(info->player == 'B'){
+        if (info->stone[1] < 1){
+            printf("introduza uma linha:\n");
+            scanf("%d", &line);
+
+            printf("introduza uma coluna:\n");
+            scanf("%d", &column);
+
+            if (info->board[line-1][column-1] != 0){
+                printf("\nJogada não é válida!\nPor favor insira nova posição!\n");
+            } else if(info->board[line-1][column-1] == 0){
+                info->board[line-1][column-1] = 4;
+                ++info->stone[1];
+            }
+        } else{
+            printf("Jogada inválida, número de pedras excedido!\n");
+        }
     }
 }
 
 void makePlayAddLine(gameInfo *info){
-    boardLineRealloc(info);
+    if (info->player == 'A'){
+        if (info->addLineColumn[0] < 2){
+            boardLineRealloc(info);
+            ++info->addLineColumn[0];
+        } else{
+            printf("Jogada inválida, número de linhas/colunas excedido!\n");
+        }
+    } else if(info->player == 'B'){
+        if (info->addLineColumn[1] < 2){
+            boardLineRealloc(info);
+            ++info->addLineColumn[1];
+        } else{
+            printf("Jogada inválida, número de linhas/colunas excedido!\n");
+        }
+    }
 }
 
 void makePlayAddColumn(gameInfo *info){
-    boardColumnRealloc(info);
+    if (info->player == 'A'){
+        if (info->addLineColumn[0] < 2){
+            boardColumnRealloc(info);
+            ++info->addLineColumn[0];
+        } else{
+            printf("Jogada inválida, número de linhas/colunas excedido!\n");
+        }
+    } else if(info->player == 'B'){
+        if (info->addLineColumn[1] < 2){
+            boardColumnRealloc(info);
+            ++info->addLineColumn[1];
+        } else{
+            printf("Jogada inválida, número de linhas/colunas excedido!\n");
+        }
+    }
 }

@@ -25,27 +25,12 @@ int main() {
         displayMenu(info);
     }
 
+    //jogo Jogador vs Jogador
     while (info->gameType==1){
 
         printBoard(info);
 
-        makePlayChangeColor(info);
-
-        printBoard(info);
-
-        makePlayPutStone(info);
-
-        printBoard(info);
-
-        makePlayAddLine(info);
-
-        printf("realocacao de memoria\n");
-
-        printBoard(info);
-
-        makePlayAddColumn(info);
-
-        printf("realocacao de memoria\n");
+        displayTurnsMenu(info);
 
         if (info->player == 'A'){
             info->player = 'B';
@@ -54,6 +39,11 @@ int main() {
         }
 
         //game = 0;
+    }
+
+    //jogo Jogador vs Computador
+    while (info->gameType == 2){
+
     }
 
     return 0;
