@@ -8,16 +8,23 @@
 
 #include "../headers/utils.h"
 
-void initRandom(){
+void initRandom() {
     srand(time(NULL));
 }
 
-int intUniformRnd(int a, int b){
-    return a + rand()%(b-a+1);
+int intUniformRnd(int a, int b) {
+    return a + rand() % (b - a + 1);
 }
 
-int probEvento(float prob){
-    return prob > ((float)rand()/RAND_MAX);
+int probEvento(float prob) {
+    return prob > ((float) rand() / RAND_MAX);
+}
+
+void cleanBufferStdin() { //funcao para limpar o buffer
+    int chr;
+    do {
+        chr = getchar();
+    } while (chr != '\n' && chr != EOF && chr != '\0');
 }
 
 /*// Função main () com alguns exemplos simples de utilizacao das funcoes

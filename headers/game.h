@@ -11,10 +11,14 @@ struct gameInfo{
     //tamanho do tabuleiro
     int **board;
 
-    int gameType;
-
     //jogador atual
     char player;
+
+    //tipo de jogo, 0 para Jogador vs Jogador e 1 para Jogador vs Computador
+    int gameType;
+
+    //validade da jogada, 0 para inválido e 1 para valido
+    int validPlay;
 
     //Array para guardar quantas pedras podem ser utilizadas
     int stone[2];
@@ -22,7 +26,7 @@ struct gameInfo{
     //Array para guardar quantas linhas/colunas podem ser utilizadas
     int addLineColumn[2];
 
-    //dimensão do tabuleiro
+    //dimensão do tabuleiro, size[0] para as linhas e size[1] para as colunas
     int size[2];
 
     //numero de turnos

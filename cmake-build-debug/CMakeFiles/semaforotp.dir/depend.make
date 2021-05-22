@@ -28,6 +28,7 @@ CMakeFiles/semaforotp.dir/sources/playMenu.c.o: ../sources/playMenu.c
 
 CMakeFiles/semaforotp.dir/sources/selectMenu.c.o: ../headers/game.h
 CMakeFiles/semaforotp.dir/sources/selectMenu.c.o: ../headers/play.h
+CMakeFiles/semaforotp.dir/sources/selectMenu.c.o: ../headers/utils.h
 CMakeFiles/semaforotp.dir/sources/selectMenu.c.o: ../sources/selectMenu.c
 
 CMakeFiles/semaforotp.dir/sources/utils.c.o: ../headers/utils.h

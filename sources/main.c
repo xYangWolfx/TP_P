@@ -28,9 +28,11 @@ int main() {
     //jogo Jogador vs Jogador
     while (info->gameType==1){
 
-        printBoard(info);
+        do {
+            printBoard(info);
 
-        displayTurnsMenu(info);
+            displayTurnsMenu(info);
+        } while (info->validPlay != 1);
 
         if (info->player == 'A'){
             info->player = 'B';

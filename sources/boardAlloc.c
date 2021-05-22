@@ -59,7 +59,7 @@ void boardColumnRealloc(gameInfo *info){
         exit(0);
     }
 
-    for (int i = 0; i < info->size[0]; ++i) {
+    for (int i = 0; i < info->size[0]; i++) {
         boardAux[i] = realloc(info->board[i], sizeof(int) * (info->size[1]));
     }
 
@@ -70,7 +70,7 @@ void boardColumnRealloc(gameInfo *info){
         exit(0);
     }
 
-    for (int i = 0; i < info->size[0]; ++i) {
+    for (int i = 0; i < info->size[0]; i++) {
         boardAux[i][info->size[1]-1]= 0 ;
     }
 }

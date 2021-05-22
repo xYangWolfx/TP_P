@@ -6,13 +6,27 @@
 
 #include "../headers/game.h"
 #include "../headers/play.h"
+#include "../headers/utils.h"
 
 void displayPlayMenu(gameInfo *info) {
-    int gameType;
+    int gameType, validChoice = 0;
+    char term;
 
-    printf("Que tipo de jogo pretende?\n");
-    printf("  1- Jogador vs Jogador\n  2- Jogador vs Computador\n  3- Voltar ao menuprincipal\n");
-    scanf("%d", &gameType);
+    do {
+        printf("Que tipo de jogo pretende?\n");
+        printf("  1- Jogador vs Jogador\n  2- Jogador vs Computador\n  3- Voltar ao menuprincipal\n");
+        if(scanf("%d%c", &gameType, &term) != 2 || term != '\n'){
+            cleanBufferStdin();
+            printf("Carácter inválido, insira uma opção válida!\n");
+        }
+        else{
+            if(gameType < 1 || gameType > 3){
+                printf("Insira uma opção válida!\n");
+            }else{
+                validChoice = 1;
+            }
+        }
+    } while (validChoice != 1);
 
     switch (gameType) {
         case 1:
@@ -27,11 +41,24 @@ void displayPlayMenu(gameInfo *info) {
 }
 
 void displayMenu(gameInfo *info) {
-    int choice;
+    int choice, validChoice = 0;
+    char term;
 
-    printf("Selecione uma opção: \n");
-    printf("  1- Jogar\n  2- Créditos\n  3- Sair\n");
-    scanf("%d", &choice);
+    do {
+        printf("Selecione uma opção: \n");
+        printf("  1- Jogar\n  2- Créditos\n  3- Sair\n");
+        if(scanf("%d%c", &choice, &term) != 2 || term != '\n'){
+            cleanBufferStdin();
+            printf("Carácter inválido, insira uma opção válida!\n");
+        }
+        else{
+            if(choice < 1 || choice > 3){
+                printf("Insira uma opção válida!\n");
+            }else{
+                validChoice = 1;
+            }
+        }
+    } while (validChoice != 1);
 
     switch (choice) {
         case 1:
@@ -56,10 +83,24 @@ void displayMenu(gameInfo *info) {
 }
 
 void displayTurnsMenu(gameInfo *info){
-    int choice;
+    int choice, validChoice = 0;
+    char term;
+    info->validPlay = 1;
 
-    printf("Vez do jogador %c\nSelecione a sua jogada:\n 1- Colocar cor\n 2- Colocar pedra\n 3- Inserir nova linha\n 4- Inserir nova coluna\n", info->player);
-    scanf("%d", &choice);
+    do {
+        printf("Vez do jogador %c\nSelecione a sua jogada:\n 1- Colocar cor\n 2- Colocar pedra\n 3- Inserir nova linha\n 4- Inserir nova coluna\n", info->player);
+        if(scanf("%d%c", &choice, &term) != 2 || term != '\n'){
+            cleanBufferStdin();
+            printf("Carácter inválido, insira uma opção válida!\n");
+        }
+        else{
+            if (choice < 1 || choice > 4){
+                printf("Insira uma opção válida!\n");
+            }else{
+                validChoice = 1;
+            }
+        }
+    } while (validChoice != 1);
 
     switch (choice) {
         case 1:
@@ -74,6 +115,7 @@ void displayTurnsMenu(gameInfo *info){
         case 4:
             makePlayAddColumn(info);
             break;
+        default:
+            break;
     }
-
 }

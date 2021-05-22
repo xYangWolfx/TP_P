@@ -9,6 +9,7 @@
 void setInfo(gameInfo *info){
     info->player = 'A';
     info->gameType = 0;
+    info->validPlay = 0;
     info->stone[0] = 0;
     info->stone[1] = 0;
     info->addLineColumn[0] = 0;

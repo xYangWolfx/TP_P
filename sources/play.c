@@ -24,6 +24,7 @@ void makePlayChangeColor(gameInfo *info){
         info->board[line-1][column-1] = 3;
     } else{
         printf("\nJogada não é válida!\nPor favor insira nova posição!\n");
+        info->validPlay = 0;
     }
 }
 
@@ -40,12 +41,14 @@ void makePlayPutStone(gameInfo *info){
 
             if (info->board[line-1][column-1] != 0){
                 printf("\nJogada não é válida!\nPor favor insira nova posição!\n");
+                info->validPlay = 0;
             } else if(info->board[line-1][column-1] == 0){
                 info->board[line-1][column-1] = 4;
                 ++info->stone[0];
             }
         } else{
             printf("Jogada inválida, número de pedras excedido!\n");
+            info->validPlay = 0;
         }
     } else if(info->player == 'B'){
         if (info->stone[1] < 1){
@@ -57,12 +60,14 @@ void makePlayPutStone(gameInfo *info){
 
             if (info->board[line-1][column-1] != 0){
                 printf("\nJogada não é válida!\nPor favor insira nova posição!\n");
+                info->validPlay = 0;
             } else if(info->board[line-1][column-1] == 0){
                 info->board[line-1][column-1] = 4;
                 ++info->stone[1];
             }
         } else{
             printf("Jogada inválida, número de pedras excedido!\n");
+            info->validPlay = 0;
         }
     }
 }
@@ -74,6 +79,7 @@ void makePlayAddLine(gameInfo *info){
             ++info->addLineColumn[0];
         } else{
             printf("Jogada inválida, número de linhas/colunas excedido!\n");
+            info->validPlay = 0;
         }
     } else if(info->player == 'B'){
         if (info->addLineColumn[1] < 2){
@@ -81,6 +87,7 @@ void makePlayAddLine(gameInfo *info){
             ++info->addLineColumn[1];
         } else{
             printf("Jogada inválida, número de linhas/colunas excedido!\n");
+            info->validPlay = 0;
         }
     }
 }
@@ -92,6 +99,7 @@ void makePlayAddColumn(gameInfo *info){
             ++info->addLineColumn[0];
         } else{
             printf("Jogada inválida, número de linhas/colunas excedido!\n");
+            info->validPlay = 0;
         }
     } else if(info->player == 'B'){
         if (info->addLineColumn[1] < 2){
@@ -99,6 +107,7 @@ void makePlayAddColumn(gameInfo *info){
             ++info->addLineColumn[1];
         } else{
             printf("Jogada inválida, número de linhas/colunas excedido!\n");
+            info->validPlay = 0;
         }
     }
 }
