@@ -16,31 +16,53 @@ int intUniformRnd(int a, int b) {
     return a + rand() % (b - a + 1);
 }
 
-int probEvento(float prob) {
-    return prob > ((float) rand() / RAND_MAX);
-}
-
-void cleanBufferStdin() { //funcao para limpar o buffer
+//funcao para limpar o buffer
+void cleanBufferStdin() {
     int chr;
     do {
         chr = getchar();
     } while (chr != '\n' && chr != EOF && chr != '\0');
 }
 
-/*// Função main () com alguns exemplos simples de utilizacao das funcoes
-int main(){
+//Lê um valor inteiro dentro de um intervalo dado e protege contra a inserção de um caracter
+int checkInt(int min, int max) {
+    int option;
+    char entryChar[100];
+    do {
+        do {
+            scanf("%s", entryChar);
+            cleanBufferStdin();
+            if (sscanf(entryChar, "%d", &option) != 1) {
+                printf("Caracter inválido, insira uma opção válida!\n");
+            }
+        } while (sscanf(entryChar, "%d", &option) != 1);
 
-  int i;
+        if (option < min || option > max) {
+            printf("Introduziu valores fora do alcance permitido!\nInsira uma opção válida!\n");
+        }
+    } while (option < min || option > max);
+    return option;
+}
 
-    initRandom();   // esta função só deve ser chamada uma vez
+//Invalida a alocação de memória do tabuleiro principal
+void checkAllocMemory(gameInfo *info, int position) {
+    if (position == 0) {
+        if (info->board == NULL) {
+            printf("Erro de alocação de memória!");
+            exit(0);
+        }
+    } else {
+        if (info->board[position] == NULL) {
+            printf("erro de alocacao de memoria!");
+            exit(0);
+        }
+    }
+}
 
-    printf("10 valores aleatorios uniformes entre [4, 10]:\n");
-    for(i=0; i<10; i++)
-        printf("%d\n", intUniformRnd(4, 100));
-
-    printf(" Probabilidade 0.25 de um evento suceder: \n");
-    for(i=0; i<10; i++)
-        printf("%d\n", probEvento(0.25));
-
-    return 0;
-}*/
+//Invalida a realocação de memória do tabuleiro auxiliar para nova alocação de memória do tabuleiro principal
+void checkAllocMemoryAux(int **board) {
+    if (board == NULL) {
+        printf("Erro de alocação de memória!");
+        exit(0);
+    }
+}

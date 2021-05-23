@@ -7,9 +7,12 @@
 
 typedef struct gameInfo gameInfo;
 
-struct gameInfo{
+struct gameInfo {
     //tamanho do tabuleiro
     int **board;
+
+    //dimensão do tabuleiro, size[0] para as linhas e size[1] para as colunas
+    int size[2];
 
     //jogador atual
     char player;
@@ -26,19 +29,21 @@ struct gameInfo{
     //Array para guardar quantas linhas/colunas podem ser utilizadas
     int addLineColumn[2];
 
-    //dimensão do tabuleiro, size[0] para as linhas e size[1] para as colunas
-    int size[2];
-
     //numero de turnos
     int turn;
 
     //armazenar jogadas
     int play[3];
 
+    //indicar se o jogo terminou, 0 para "a decorrer" e 1 para "vitória"
+    int winner;
+
     //lista ligada
-    struct gameInfo * nextGame;
+    struct gameInfo *nextGame;
 };
 
 void setInfo(gameInfo *info);
+
+void isWinner(gameInfo *info);
 
 #endif //SEMAFOROTP_GAME_H

@@ -7,9 +7,18 @@
 
 #include "game.h"
 
+//Realização de jogadas
+
+//Realiza a jogada de inserir/alterar cores do tabuleiro
 void makePlayChangeColor(gameInfo *info);
+
+//Realiza a jogada de colocar a pedra no tabuleiro
 void makePlayPutStone(gameInfo *info);
+
+//Realiza a jogada de inserir uma nova linha no tabuleiro
 void makePlayAddLine(gameInfo *info);
+
+//Realiza a jogada de inserir uma nova coluna no tabuleiro
 void makePlayAddColumn(gameInfo *info);
 
 #endif //SEMAFOROTP_PLAY_H
