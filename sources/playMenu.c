@@ -41,9 +41,7 @@ void displayTurnsMenu(gameInfo *info) {
             }
             break;
         case 6:
-            printf("Vai gravar em bin!");
             saveCurrentGame(info);
-            printf("Gravou em bin!");
             info->gameType = 3;
             break;
     }

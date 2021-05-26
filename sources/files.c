@@ -49,7 +49,6 @@ void saveGameTurns(gameInfo *info){
 }
 
 void saveCurrentGame(gameInfo *info){
-    printf("Salvou jogo currente");
     FILE *save;
     int player;
 
@@ -78,21 +77,15 @@ void saveCurrentGame(gameInfo *info){
         fwrite(&info->addLineColumn[i], sizeof(info->addLineColumn[i]), 1, save);
     }
 
-    printf("Antes de guarda o board!");
-
     for (int i = 0; i < info->size[0]; ++i) {
         for (int j = 0; j < info->size[1]; ++j) {
             fwrite(&info->board[i][j], sizeof(&info->board[i][j]), 1, save);
         }
     }
-
-    printf("Depois de guarda o board!");
-
     fclose(save);
 }
 
 void resumeLastGame(gameInfo *info){
-    printf("Leu jogo anterior");
     FILE *save;
     int game;
 
@@ -107,28 +100,32 @@ void resumeLastGame(gameInfo *info){
         info->player = 'B';
     }
 
-    fread(&info->gameType, sizeof(int), 1, save);
-    fread(&info->validPlay, sizeof(int), 1, save);
-    fread(&info->turn, sizeof(int), 1, save);
-    fread(&info->winner, sizeof(int), 1, save);
+    fread(&game, sizeof(int), 1, save);
+    info->gameType = game;
+    fread(&game, sizeof(int), 1, save);
+    info->validPlay = game;
+    fread(&game, sizeof(int), 1, save);
+    info->turn = game;
+    fread(&game, sizeof(int), 1, save);
+    info->winner = game;
 
     for (int i = 0; i < 2; ++i) {
-        fread(&info->size[i], sizeof(int), 1, save);
-        fread(&info->stone[i], sizeof(int), 1, save);
-        fread(&info->addLineColumn[i], sizeof(int), 1, save);
+        fread(&game, sizeof(int), 1, save);
+        info->size[i] = game;
+        fread(&game, sizeof(int), 1, save);
+        info->stone[i] = game;
+        fread(&game, sizeof(int), 1, save);
+        info->addLineColumn[i] = game;
     }
 
-    printf("Antes de guarda o board!");
+    boardAlloc(info);
+    //populateBoard(info);
 
     for (int i = 0; i < info->size[0]; ++i) {
         for (int j = 0; j < info->size[1]; ++j) {
-            fread(&info->board[i][j], sizeof(&info->board[i][j]), 1, save);
+            fread(&game, sizeof(int), 1, save);
+            info->board[i][j] = game;
         }
     }
-
-    printf("Depois de guarda o board!");
-
     fclose(save);
-
-
 }

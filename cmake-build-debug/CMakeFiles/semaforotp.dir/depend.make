@@ -34,6 +34,7 @@ CMakeFiles/semaforotp.dir/sources/play.c.o: ../headers/play.h
 CMakeFiles/semaforotp.dir/sources/play.c.o: ../headers/utils.h
 CMakeFiles/semaforotp.dir/sources/play.c.o: ../sources/play.c
 
+CMakeFiles/semaforotp.dir/sources/playMenu.c.o: ../headers/files.h
 CMakeFiles/semaforotp.dir/sources/playMenu.c.o: ../headers/game.h
 CMakeFiles/semaforotp.dir/sources/playMenu.c.o: ../headers/play.h
 CMakeFiles/semaforotp.dir/sources/playMenu.c.o: ../headers/utils.h

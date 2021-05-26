@@ -20,13 +20,11 @@ int main() {
 
     do {
         setInfo(info);
-
         int temp;
-
         temp = checkIfFileExists();
 
         if (temp == 1){
-            printf("Ficheiro encontrado");
+            printf("Ficheiro encontrado\n");
             resumeLastGame(info);
         } else{
             temp = intUniformRnd(3, 5);
