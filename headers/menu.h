@@ -11,4 +11,7 @@ void displayMenu(gameInfo *info);
 //Mostrar menu de opções de jogadas e receber inputs do utilizador
 void displayTurnsMenu(gameInfo *info);
 
+//Dar opção ao utilizador de jogar um novo jogo ou sair da aplicação
+void newGame(gameInfo *info);
+
 #endif //SEMAFOROTP_MENU_H

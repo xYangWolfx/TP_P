@@ -11,10 +11,10 @@ void displayTurnsMenu(gameInfo *info) {
     int choice;
     info->validPlay = 1;
 
-    printf("Vez do jogador %c\nSelecione a sua jogada:\n 1- Colocar cor\n 2- Colocar pedra\n 3- Inserir nova linha\n 4- Inserir nova coluna\n",
-           info->player);
+    printf("Vez do jogador %c\nTurno: %d\nSelecione a sua jogada:\n 1- Colocar cor\n 2- Colocar pedra\n 3- Inserir nova linha"
+           "\n 4- Inserir nova coluna\n 5- Rever jogadas anteriores\n", info->player, info->turn);
 
-    choice = checkInt(1, 4);
+    choice = checkInt(1, 5);
 
     switch (choice) {
         case 1:
@@ -28,6 +28,9 @@ void displayTurnsMenu(gameInfo *info) {
             break;
         case 4:
             makePlayAddColumn(info);
+            break;
+        case 5:
+            showPreviousTurns(info);
             break;
         default:
             break;

@@ -17,7 +17,8 @@ struct gameInfo {
     //jogador atual
     char player;
 
-    //tipo de jogo, 0 para Jogador vs Jogador e 1 para Jogador vs Computador
+    //tipo de jogo, 0 para navegar nos menus, 1 para Jogador vs Jogador,
+    //2 para Jogador vs Computador e 3 para sair do jogo
     int gameType;
 
     //validade da jogada, 0 para inválido e 1 para valido
@@ -32,14 +33,11 @@ struct gameInfo {
     //numero de turnos
     int turn;
 
-    //armazenar jogadas
-    int play[3];
-
     //indicar se o jogo terminou, 0 para "a decorrer" e 1 para "vitória"
     int winner;
 
     //lista ligada
-    struct gameInfo *nextGame;
+    struct gameInfo *nextTurns;
 };
 
 void setInfo(gameInfo *info);

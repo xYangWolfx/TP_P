@@ -21,4 +21,7 @@ void makePlayAddLine(gameInfo *info);
 //Realiza a jogada de inserir uma nova coluna no tabuleiro
 void makePlayAddColumn(gameInfo *info);
 
+//Mostrar "x" jogadas anteriores pedidas pelo utilizador
+void showPreviousTurns(gameInfo *info);
+
 #endif //SEMAFOROTP_PLAY_H

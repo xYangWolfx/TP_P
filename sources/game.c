@@ -2,9 +2,6 @@
 // Created by miguel on 5/19/21.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
-
 #include "../headers/game.h"
 
 void setInfo(gameInfo *info) {
@@ -24,7 +21,7 @@ void setInfo(gameInfo *info) {
 void isWinner(gameInfo *info) {
     int g = 0, y = 0, r = 0, k = info->size[1] - 1;
 
-    //veriicar linhas
+    //verificar linhas
     for (int i = 0; i < info->size[0]; i++) {
         for (int j = 0; j < info->size[1]; j++) {
             if (info->board[i][j] == 1) {
@@ -91,7 +88,6 @@ void isWinner(gameInfo *info) {
                 } else if (info->board[i][k] == 3) {
                     ++r;
                 }
-
                 --k;
             }
 

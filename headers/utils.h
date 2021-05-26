@@ -20,10 +20,16 @@ void cleanBufferStdin();
 //Validar o input do utilizador, certificando que é um inteiro dentro dos valores permitidos
 int checkInt(int min, int max);
 
+//Invalida a alocação de memória da estrutura
+void checkAllocMemory(gameInfo *info);
+
 //Invalida a alocação de memória do tabuleiro principal
-void checkAllocMemory(gameInfo *info, int position);
+void checkBoardAllocMemory(gameInfo *info, int position);
 
 //Invalida a realocação de memória do tabuleiro auxiliar para nova alocação de memória do tabuleiro principal
 void checkAllocMemoryAux(int **board);
+
+//Igualar estruturas ao salvar jogo para utilizar listas ligadas
+void setAuxStruct(gameInfo *info);
 
 #endif //SEMAFOROTP_UTILS_H

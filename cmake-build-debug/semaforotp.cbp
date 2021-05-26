@@ -88,6 +88,9 @@
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/headers/play.h">
 			<Option target="semaforotp"/>
 		</Unit>
+		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/headers/saves.h">
+			<Option target="semaforotp"/>
+		</Unit>
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/headers/utils.h">
 			<Option target="semaforotp"/>
 		</Unit>
@@ -107,6 +110,9 @@
 			<Option target="semaforotp"/>
 		</Unit>
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/sources/playMenu.c">
+			<Option target="semaforotp"/>
+		</Unit>
+		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/sources/saveTurns.c">
 			<Option target="semaforotp"/>
 		</Unit>
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/sources/selectMenu.c">

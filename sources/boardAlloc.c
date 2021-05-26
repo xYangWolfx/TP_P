@@ -9,13 +9,13 @@
 
 //inicializar o tabuleiro
 void boardAlloc(struct gameInfo *info){
-    info->board = malloc(sizeof info->board * info->size[0]);
+    info->board = malloc(sizeof(info->board) * info->size[0]);
 
-    checkAllocMemory(info, 0);
+    checkBoardAllocMemory(info, 0);
 
     for (int i = 0; i < info->size[0]; i++) {
-        info->board[i] = malloc(sizeof info->board[i] * info->size[1]);
-        checkAllocMemory(info, i);
+        info->board[i] = malloc(sizeof(info->board[i]) * info->size[1]);
+        checkBoardAllocMemory(info, i);
     }
 }
 
@@ -27,7 +27,7 @@ void boardLineRealloc(gameInfo *info){
     info->board=boardAux;
     info->board[info->size[0]-1] = malloc(sizeof(int) * info->size[1]);
 
-    checkAllocMemory(info, 0);
+    checkBoardAllocMemory(info, 0);
 
     for (int i = 0; i < info->size[1]; i++) {
         info->board[info->size[0]-1][i] = 0;
@@ -46,7 +46,7 @@ void boardColumnRealloc(gameInfo *info){
 
     info->board=boardAux;
 
-    checkAllocMemory(info, 0);
+    checkBoardAllocMemory(info, 0);
 
     for (int i = 0; i < info->size[0]; i++) {
         boardAux[i][info->size[1]-1]= 0 ;
@@ -54,7 +54,7 @@ void boardColumnRealloc(gameInfo *info){
 }
 
 void cleanBoardAlloc(gameInfo *info){
-    checkAllocMemory(info, 0);
+    checkBoardAllocMemory(info, 0);
 
     for (int i = 0; i < info->size[0]; i++) {
         free(info->board[i]);

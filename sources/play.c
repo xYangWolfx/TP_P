@@ -10,10 +10,10 @@
 void makePlayChangeColor(gameInfo *info) {
     int line, column;
 
-    printf("introduza uma linha:\n");
+    printf("Introduza uma linha:\n");
     line = checkInt(1, info->size[0]);
 
-    printf("introduza uma coluna:\n");
+    printf("Introduza uma coluna:\n");
     column = checkInt(1, info->size[1]);
 
     if (info->board[line - 1][column - 1] == 0) {
@@ -24,11 +24,11 @@ void makePlayChangeColor(gameInfo *info) {
         info->board[line - 1][column - 1] = 3;
     } else {
         if (info->board[line - 1][column - 1] == 3) {
-            printf("Não pode alterar uma peça vermelha!");
+            printf("Não pode alterar uma peça vermelha!\n");
         } else if (info->board[line - 1][column - 1] == 4) {
-            printf("Nao pode jogar sobre uma pedra!");
+            printf("Não pode jogar sobre uma pedra\n!");
         }
-        printf("\nJogada não é válida!\nPor favor insira nova posição!\n");
+        printf("Jogada não é válida!\nPor favor insira nova posição!\n");
         info->validPlay = 0;
     }
 }
@@ -38,14 +38,14 @@ void makePlayPutStone(gameInfo *info) {
 
     if (info->player == 'A') {
         if (info->stone[0] < 1) {
-            printf("introduza uma linha:\n");
+            printf("Introduza uma linha:\n");
             line = checkInt(1, info->size[0]);
 
-            printf("introduza uma coluna:\n");
+            printf("Introduza uma coluna:\n");
             column = checkInt(1, info->size[1]);
 
             if (info->board[line - 1][column - 1] != 0) {
-                printf("\nNão pode colocar uma pedra numa posição já ocupada1\nJogada não é válida!\nPor favor insira nova posição!\n");
+                printf("Não pode colocar uma pedra numa posição já ocupada!\nJogada não é válida!\nPor favor insira nova posição!\n");
                 info->validPlay = 0;
             } else if (info->board[line - 1][column - 1] == 0) {
                 info->board[line - 1][column - 1] = 4;
@@ -57,14 +57,14 @@ void makePlayPutStone(gameInfo *info) {
         }
     } else if (info->player == 'B') {
         if (info->stone[1] < 1) {
-            printf("introduza uma linha:\n");
+            printf("Introduza uma linha:\n");
             line = checkInt(1, info->size[0]);
 
-            printf("introduza uma coluna:\n");
+            printf("Introduza uma coluna:\n");
             column = checkInt(1, info->size[1]);
 
             if (info->board[line - 1][column - 1] != 0) {
-                printf("\nJogada não é válida!\nPor favor insira nova posição!\n");
+                printf("Não pode colocar uma pedra numa posição já ocupada!\nJogada não é válida!\nPor favor insira nova posição!\n");
                 info->validPlay = 0;
             } else if (info->board[line - 1][column - 1] == 0) {
                 info->board[line - 1][column - 1] = 4;
@@ -115,4 +115,27 @@ void makePlayAddColumn(gameInfo *info) {
             info->validPlay = 0;
         }
     }
+}
+
+void showPreviousTurns(gameInfo *info) {
+    gameInfo *infoAux = info;
+    int turns = 2;
+
+    printf("Introduza quantas jogadas pretende rever:\n");
+    //scanf("%d", &turns);
+
+    for (int i = 0; i < turns; ++i) {
+        printf("entrou no for de rever turnos!\n");
+        infoAux = infoAux->nextTurns;
+
+        if (infoAux == NULL){
+            printf("infoAux esta null!\n");
+            break;
+        }
+
+        printf("Vez do jogador %c\nTurno: %d\n", infoAux->player, infoAux->turn);
+
+        printBoard(infoAux);
+    }
+    info->validPlay = 0;
 }

@@ -44,8 +44,16 @@ int checkInt(int min, int max) {
     return option;
 }
 
+//Invalida a alocação de memória da estrutura
+void checkAllocMemory(gameInfo *info){
+    if (info == NULL){
+        printf("Erro de alocação de memória!");
+        exit(0);
+    }
+}
+
 //Invalida a alocação de memória do tabuleiro principal
-void checkAllocMemory(gameInfo *info, int position) {
+void checkBoardAllocMemory(gameInfo *info, int position) {
     if (position == 0) {
         if (info->board == NULL) {
             printf("Erro de alocação de memória!");
@@ -53,7 +61,7 @@ void checkAllocMemory(gameInfo *info, int position) {
         }
     } else {
         if (info->board[position] == NULL) {
-            printf("erro de alocacao de memoria!");
+            printf("Erro de alocacao de memoria!");
             exit(0);
         }
     }
@@ -65,4 +73,11 @@ void checkAllocMemoryAux(int **board) {
         printf("Erro de alocação de memória!");
         exit(0);
     }
+}
+
+//Igualar estruturas ao salvar jogo para utilizar listas ligadas
+void setAuxStruct(gameInfo *info){
+    gameInfo *infoAux = (gameInfo*)malloc(sizeof(gameInfo));
+
+    checkBoardAllocMemory(infoAux, 0);
 }
