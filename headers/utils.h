@@ -35,4 +35,7 @@ void checkBoardAllocMemory(gameInfo *info, int position);
 //Invalida a realocação de memória do tabuleiro auxiliar para nova alocação de memória do tabuleiro principal
 void checkAllocMemoryAux(int **board);
 
+//Validar se a criação do ficheiro foi efetuada com sucesso
+void checkFiles(FILE *file);
+
 #endif //SEMAFOROTP_UTILS_H

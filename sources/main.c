@@ -22,12 +22,20 @@ int main() {
         setInfo(info);
 
         int temp;
-        temp = intUniformRnd(3, 5);
-        info->size[0] = temp;
-        info->size[1] = temp;
 
-        boardAlloc(info);
-        populateBoard(info);
+        temp = checkIfFileExists();
+
+        if (temp == 1){
+            printf("Ficheiro encontrado");
+            resumeLastGame(info);
+        } else{
+            temp = intUniformRnd(3, 5);
+            info->size[0] = temp;
+            info->size[1] = temp;
+
+            boardAlloc(info);
+            populateBoard(info);
+        }
 
         while (info->gameType == 0) {
             displayMenu(info);
@@ -44,14 +52,14 @@ int main() {
 
             isWinner(info);
 
-            if (info->winner == 0) {
+            if (info->winner == 0 && info->gameType == 1) {
                 if (info->player == 'A') {
                     info->player = 'B';
                 } else if (info->player == 'B') {
                     info->player = 'A';
                 }
                 ++info->turn;
-            } else {
+            } else if (info->winner == 1 && info->gameType == 1){
                 printBoardToConsole(info);
                 printf("Parabéns jogador %c, ganhou o jogo!\n", info->player);
                 saveGameTurns(info);

@@ -7,6 +7,12 @@
 #ifndef SEMAFOROTP_FILES_H
 #define SEMAFOROTP_FILES_H
 
+int checkIfFileExists();
+
 void saveGameTurns(gameInfo *info);
+
+void saveCurrentGame(gameInfo *info);
+
+void resumeLastGame(gameInfo *info);
 
 #endif //SEMAFOROTP_FILES_H

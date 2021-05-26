@@ -8,15 +8,16 @@
 
 #include "../headers/play.h"
 #include "../headers/utils.h"
+#include "../headers/files.h"
 
 void displayTurnsMenu(gameInfo *info) {
     int choice;
     info->validPlay = 1;
 
     printf("Vez do jogador %c\nTurno: %d\nSelecione a sua jogada:\n 1- Colocar cor\n 2- Colocar pedra\n 3- Inserir nova linha"
-           "\n 4- Inserir nova coluna\n 5- Rever jogadas anteriores\n", info->player, info->turn);
+           "\n 4- Inserir nova coluna\n 5- Rever jogadas anteriores\n 6- Sair do jogo\n", info->player, info->turn);
 
-    choice = checkInt(1, 5);
+    choice = checkInt(1, 6);
 
     switch (choice) {
         case 1:
@@ -39,7 +40,11 @@ void displayTurnsMenu(gameInfo *info) {
                 showPreviousTurns(info);
             }
             break;
-        default:
+        case 6:
+            printf("Vai gravar em bin!");
+            saveCurrentGame(info);
+            printf("Gravou em bin!");
+            info->gameType = 3;
             break;
     }
 }

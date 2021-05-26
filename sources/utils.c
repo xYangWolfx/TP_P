@@ -94,3 +94,11 @@ void checkAllocMemoryAux(int **board) {
         exit(0);
     }
 }
+
+//Validar se a criação do ficheiro foi efetuada com sucesso
+void checkFiles(FILE *file) {
+    if (file == NULL) {
+        printf("Erro ao criar ficheiro!");
+        exit(1);
+    }
+}
