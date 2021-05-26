@@ -304,33 +304,6 @@ sources/playMenu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/playMenu.c.s
 .PHONY : sources/playMenu.c.s
 
-sources/saveTurns.o: sources/saveTurns.c.o
-
-.PHONY : sources/saveTurns.o
-
-# target to build an object file
-sources/saveTurns.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/saveTurns.c.o
-.PHONY : sources/saveTurns.c.o
-
-sources/saveTurns.i: sources/saveTurns.c.i
-
-.PHONY : sources/saveTurns.i
-
-# target to preprocess a source file
-sources/saveTurns.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/saveTurns.c.i
-.PHONY : sources/saveTurns.c.i
-
-sources/saveTurns.s: sources/saveTurns.c.s
-
-.PHONY : sources/saveTurns.s
-
-# target to generate assembly for a file
-sources/saveTurns.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/saveTurns.c.s
-.PHONY : sources/saveTurns.c.s
-
 sources/selectMenu.o: sources/selectMenu.c.o
 
 .PHONY : sources/selectMenu.o
@@ -412,9 +385,6 @@ help:
 	@echo "... sources/playMenu.o"
 	@echo "... sources/playMenu.i"
 	@echo "... sources/playMenu.s"
-	@echo "... sources/saveTurns.o"
-	@echo "... sources/saveTurns.i"
-	@echo "... sources/saveTurns.s"
 	@echo "... sources/selectMenu.o"
 	@echo "... sources/selectMenu.i"
 	@echo "... sources/selectMenu.s"

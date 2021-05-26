@@ -1,7 +1,8 @@
 //
-// Created by miguel on 5/19/21.
+// Created by Miguel Ferreira,
+// Nº: 2020107016,
+// on 5/19/21.
 //
-
 #ifndef SEMAFOROTP_PLAY_H
 #define SEMAFOROTP_PLAY_H
 

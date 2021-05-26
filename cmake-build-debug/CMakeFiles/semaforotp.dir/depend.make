@@ -11,13 +11,14 @@ CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o: ../headers/game.h
 CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o: ../headers/utils.h
 CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o: ../sources/boardAlloc.c
 
+CMakeFiles/semaforotp.dir/sources/game.c.o: ../headers/board.h
 CMakeFiles/semaforotp.dir/sources/game.c.o: ../headers/game.h
+CMakeFiles/semaforotp.dir/sources/game.c.o: ../headers/utils.h
 CMakeFiles/semaforotp.dir/sources/game.c.o: ../sources/game.c
 
 CMakeFiles/semaforotp.dir/sources/main.c.o: ../headers/board.h
 CMakeFiles/semaforotp.dir/sources/main.c.o: ../headers/game.h
 CMakeFiles/semaforotp.dir/sources/main.c.o: ../headers/menu.h
-CMakeFiles/semaforotp.dir/sources/main.c.o: ../headers/saves.h
 CMakeFiles/semaforotp.dir/sources/main.c.o: ../headers/utils.h
 CMakeFiles/semaforotp.dir/sources/main.c.o: ../sources/main.c
 
@@ -31,11 +32,6 @@ CMakeFiles/semaforotp.dir/sources/playMenu.c.o: ../headers/game.h
 CMakeFiles/semaforotp.dir/sources/playMenu.c.o: ../headers/play.h
 CMakeFiles/semaforotp.dir/sources/playMenu.c.o: ../headers/utils.h
 CMakeFiles/semaforotp.dir/sources/playMenu.c.o: ../sources/playMenu.c
-
-CMakeFiles/semaforotp.dir/sources/saveTurns.c.o: ../headers/board.h
-CMakeFiles/semaforotp.dir/sources/saveTurns.c.o: ../headers/game.h
-CMakeFiles/semaforotp.dir/sources/saveTurns.c.o: ../headers/utils.h
-CMakeFiles/semaforotp.dir/sources/saveTurns.c.o: ../sources/saveTurns.c
 
 CMakeFiles/semaforotp.dir/sources/selectMenu.c.o: ../headers/game.h
 CMakeFiles/semaforotp.dir/sources/selectMenu.c.o: ../headers/utils.h

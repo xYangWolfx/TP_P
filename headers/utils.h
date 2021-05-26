@@ -1,5 +1,7 @@
 //
-// Created by miguel on 5/19/21.
+// Created by Miguel Ferreira,
+// Nº: 2020107016,
+// on 5/19/21.
 //
 
 #ifndef SEMAFOROTP_UTILS_H
@@ -28,8 +30,5 @@ void checkBoardAllocMemory(gameInfo *info, int position);
 
 //Invalida a realocação de memória do tabuleiro auxiliar para nova alocação de memória do tabuleiro principal
 void checkAllocMemoryAux(int **board);
-
-//Igualar estruturas ao salvar jogo para utilizar listas ligadas
-void setAuxStruct(gameInfo *info);
 
 #endif //SEMAFOROTP_UTILS_H

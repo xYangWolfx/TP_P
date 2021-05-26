@@ -1,5 +1,7 @@
 //
-// Created by Miguel Ferreira on 5/19/21.
+// Created by Miguel Ferreira,
+// Nº: 2020107016,
+// on 5/19/21.
 //
 
 #ifndef SEMAFOROTP_BOARD_H

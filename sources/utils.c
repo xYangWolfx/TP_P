@@ -1,5 +1,7 @@
 //
-// Created by miguel on 5/19/21.
+// Created by Miguel Ferreira,
+// Nº: 2020107016,
+// on 5/19/21.
 //
 
 #include <stdio.h>
@@ -45,8 +47,8 @@ int checkInt(int min, int max) {
 }
 
 //Invalida a alocação de memória da estrutura
-void checkAllocMemory(gameInfo *info){
-    if (info == NULL){
+void checkAllocMemory(gameInfo *info) {
+    if (info == NULL) {
         printf("Erro de alocação de memória!");
         exit(0);
     }
@@ -73,11 +75,4 @@ void checkAllocMemoryAux(int **board) {
         printf("Erro de alocação de memória!");
         exit(0);
     }
-}
-
-//Igualar estruturas ao salvar jogo para utilizar listas ligadas
-void setAuxStruct(gameInfo *info){
-    gameInfo *infoAux = (gameInfo*)malloc(sizeof(gameInfo));
-
-    checkBoardAllocMemory(infoAux, 0);
 }

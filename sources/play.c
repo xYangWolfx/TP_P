@@ -1,5 +1,7 @@
 //
-// Created by miguel on 5/19/21.
+// Created by Miguel Ferreira,
+// Nº: 2020107016,
+// on 5/19/21.
 //
 
 #include <stdio.h>
@@ -128,10 +130,12 @@ void showPreviousTurns(gameInfo *info) {
         printf("entrou no for de rever turnos!\n");
         infoAux = infoAux->nextTurns;
 
-        if (infoAux == NULL){
+        if (infoAux == NULL) {
             printf("infoAux esta null!\n");
             break;
         }
+
+        showPreviousTurns(infoAux);
 
         printf("Vez do jogador %c\nTurno: %d\n", infoAux->player, infoAux->turn);
 

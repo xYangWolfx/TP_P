@@ -1,14 +1,19 @@
+//
+// Created by Miguel Ferreira,
+// Nº: 2020107016,
+// on 5/19/21.
+//
+
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "../headers/utils.h"
 #include "../headers/board.h"
 #include "../headers/menu.h"
-#include "../headers/saves.h"
 
 int main() {
     initRandom();
-    gameInfo *info = (gameInfo*) malloc(sizeof(gameInfo));
+    gameInfo *info = (gameInfo *) malloc(sizeof(gameInfo));
 
     checkAllocMemory(info);
 
@@ -34,7 +39,7 @@ int main() {
                 displayTurnsMenu(info);
             } while (info->validPlay != 1);
 
-            saveTurn(info);
+            saveTurns(&info);
 
             isWinner(info);
 

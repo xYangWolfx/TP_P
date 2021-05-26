@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/miguel/CLionProjects/tpSemaforo/sources/main.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/main.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/play.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/play.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/playMenu.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/playMenu.c.o"
-  "/home/miguel/CLionProjects/tpSemaforo/sources/saveTurns.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/saveTurns.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/selectMenu.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/selectMenu.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/utils.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/utils.c.o"
   )

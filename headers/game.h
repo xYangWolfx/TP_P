@@ -1,5 +1,7 @@
 //
-// Created by Miguel Ferreira on 5/19/21.
+// Created by Miguel Ferreira,
+// Nº: 2020107016,
+// on 5/19/21.
 //
 
 #ifndef SEMAFOROTP_GAME_H
@@ -43,5 +45,7 @@ struct gameInfo {
 void setInfo(gameInfo *info);
 
 void isWinner(gameInfo *info);
+
+void saveTurns(gameInfo **info);
 
 #endif //SEMAFOROTP_GAME_H

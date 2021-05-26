@@ -1,8 +1,13 @@
 //
-// Created by miguel on 5/19/21.
+// Created by Miguel Ferreira,
+// Nº: 2020107016,
+// on 5/19/21.
 //
 
+#include <stdlib.h>
+
 #include "../headers/game.h"
+#include "../headers/board.h"
 
 void setInfo(gameInfo *info) {
     info->player = 'A';
@@ -96,4 +101,34 @@ void isWinner(gameInfo *info) {
             }
         }
     }
+}
+
+void saveTurns(gameInfo **info) {
+    gameInfo *infoAux = (gameInfo *) malloc(sizeof(gameInfo));
+
+    checkAllocMemory(infoAux);
+
+    infoAux->player = (*info)->player;
+    infoAux->gameType = (*info)->gameType;
+    infoAux->validPlay = (*info)->validPlay;
+    infoAux->turn = (*info)->turn;
+    infoAux->winner = (*info)->winner;
+
+    for (int i = 0; i < 2; ++i) {
+        infoAux->stone[i] = (*info)->stone[i];
+        infoAux->addLineColumn[i] = (*info)->addLineColumn[i];
+        infoAux->size[i] = (*info)->size[i];
+    }
+
+    boardAlloc(infoAux);
+    populateBoard(infoAux);
+
+    for (int i = 0; i < (*info)->size[0]; ++i) {
+        for (int j = 0; j < (*info)->size[1]; ++j) {
+            infoAux->board[i][j] = (*info)->board[i][j];
+        }
+    }
+
+    infoAux->nextTurns = (*info);
+    (*info) = infoAux;
 }
