@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/miguel/CLionProjects/tpSemaforo/sources/board.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/board.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/boardAlloc.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o"
+  "/home/miguel/CLionProjects/tpSemaforo/sources/files.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/files.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/game.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/game.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/main.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/main.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/play.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/play.c.o"

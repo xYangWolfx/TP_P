@@ -7,6 +7,8 @@
 #ifndef SEMAFOROTP_BOARD_H
 #define SEMAFOROTP_BOARD_H
 
+#include <stdio.h>
+
 #include "game.h"
 #include "utils.h"
 
@@ -26,6 +28,9 @@ void cleanBoardAlloc(gameInfo *info);
 void populateBoard(gameInfo *info);
 
 //Imprime o tabuleiro para a consola
-void printBoard(gameInfo *info);
+void printBoardToConsole(gameInfo *info);
+
+//Imprime o tabuleiro para um ficheiro
+void printBoardToFile(gameInfo *info, FILE *file);
 
 #endif //SEMAFOROTP_BOARD_H

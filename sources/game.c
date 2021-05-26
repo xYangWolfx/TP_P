@@ -23,6 +23,36 @@ void setInfo(gameInfo *info) {
     info->winner = 0;
 }
 
+void saveTurns(gameInfo **info) {
+    gameInfo *infoAux = (gameInfo *) malloc(sizeof(gameInfo));
+
+    checkAllocMemory(infoAux);
+
+    infoAux->player = (*info)->player;
+    infoAux->gameType = (*info)->gameType;
+    infoAux->validPlay = (*info)->validPlay;
+    infoAux->turn = (*info)->turn;
+    infoAux->winner = (*info)->winner;
+
+    for (int i = 0; i < 2; ++i) {
+        infoAux->stone[i] = (*info)->stone[i];
+        infoAux->addLineColumn[i] = (*info)->addLineColumn[i];
+        infoAux->size[i] = (*info)->size[i];
+    }
+
+    boardAlloc(infoAux);
+    populateBoard(infoAux);
+
+    for (int i = 0; i < (*info)->size[0]; ++i) {
+        for (int j = 0; j < (*info)->size[1]; ++j) {
+            infoAux->board[i][j] = (*info)->board[i][j];
+        }
+    }
+
+    infoAux->nextTurns = (*info);
+    (*info) = infoAux;
+}
+
 void isWinner(gameInfo *info) {
     int g = 0, y = 0, r = 0, k = info->size[1] - 1;
 
@@ -101,34 +131,4 @@ void isWinner(gameInfo *info) {
             }
         }
     }
-}
-
-void saveTurns(gameInfo **info) {
-    gameInfo *infoAux = (gameInfo *) malloc(sizeof(gameInfo));
-
-    checkAllocMemory(infoAux);
-
-    infoAux->player = (*info)->player;
-    infoAux->gameType = (*info)->gameType;
-    infoAux->validPlay = (*info)->validPlay;
-    infoAux->turn = (*info)->turn;
-    infoAux->winner = (*info)->winner;
-
-    for (int i = 0; i < 2; ++i) {
-        infoAux->stone[i] = (*info)->stone[i];
-        infoAux->addLineColumn[i] = (*info)->addLineColumn[i];
-        infoAux->size[i] = (*info)->size[i];
-    }
-
-    boardAlloc(infoAux);
-    populateBoard(infoAux);
-
-    for (int i = 0; i < (*info)->size[0]; ++i) {
-        for (int j = 0; j < (*info)->size[1]; ++j) {
-            infoAux->board[i][j] = (*info)->board[i][j];
-        }
-    }
-
-    infoAux->nextTurns = (*info);
-    (*info) = infoAux;
 }

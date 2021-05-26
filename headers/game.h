@@ -44,8 +44,8 @@ struct gameInfo {
 
 void setInfo(gameInfo *info);
 
-void isWinner(gameInfo *info);
-
 void saveTurns(gameInfo **info);
+
+void isWinner(gameInfo *info);
 
 #endif //SEMAFOROTP_GAME_H

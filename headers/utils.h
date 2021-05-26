@@ -22,6 +22,10 @@ void cleanBufferStdin();
 //Validar o input do utilizador, certificando que é um inteiro dentro dos valores permitidos
 int checkInt(int min, int max);
 
+//Inverter ordem da lista ligada para apresentar as jogadas da mais
+//antiga para a mais recente quando o utilizador pede para rever jogadas
+void reverse(gameInfo** info);
+
 //Invalida a alocação de memória da estrutura
 void checkAllocMemory(gameInfo *info);
 

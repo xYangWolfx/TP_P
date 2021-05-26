@@ -43,7 +43,7 @@ void displayMenu(gameInfo *info) {
             break;
 
         case 2:
-            printf("O jogo do semáforo desenrola-se num tabuleiro dividido em células. No início, o tabuleiro\n"
+            printf("\nO jogo do semáforo desenrola-se num tabuleiro dividido em células. No início, o tabuleiro\n"
                    "está vazio. Alternadamente os jogadores vão colocando peças de cor Verde (G), Amarela\n"
                    "(Y) ou Vermelha (R). Ganha o jogador que coloque uma peça que permita formar uma linha,\n"
                    "coluna ou diagonal completa com peças da mesma cor.\n");
@@ -56,12 +56,12 @@ void displayMenu(gameInfo *info) {
                    "5. Adicionar uma linha ou uma coluna ao final do tabuleiro. Esta jogada adiciona linhas ou colunas\n"
                    "completas e vazias ao tabuleiro de jogo.(Cada jogador pode efetuar esta jogada, no máximo, duas vezes por jogo.\n"
                    "6. O jogador pode ainda, antes de efetuar a sua jogada, rever as jogadas efetuadas por ambos os \n"
-                   "jogadores nos turnos anteriores.");
+                   "jogadores nos turnos anteriores.\n\n");
             break;
+
         case 3:
             printf("\nTrabalho realizado por:\nMiguel Ângelo Rodrigues Ferreira\nNº: 2020107016\nLicenciatura de Engenharia Informática"
-                   "\nISEC\nUnidade Curricular: Programação\n");
-            displayMenu(info);
+                   "\nISEC\nUnidade Curricular: Programação\n\n");
             break;
 
         case 4:
@@ -81,6 +81,7 @@ void newGame(gameInfo *info) {
     if (choice == 1) {
         info->gameType = 0;
     } else {
+        printf("Obrigado por jogar!");
         info->gameType = 3;
     }
 }

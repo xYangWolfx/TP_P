@@ -79,6 +79,9 @@
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/headers/board.h">
 			<Option target="semaforotp"/>
 		</Unit>
+		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/headers/files.h">
+			<Option target="semaforotp"/>
+		</Unit>
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/headers/game.h">
 			<Option target="semaforotp"/>
 		</Unit>
@@ -95,6 +98,9 @@
 			<Option target="semaforotp"/>
 		</Unit>
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/sources/boardAlloc.c">
+			<Option target="semaforotp"/>
+		</Unit>
+		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/sources/files.c">
 			<Option target="semaforotp"/>
 		</Unit>
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/sources/game.c">

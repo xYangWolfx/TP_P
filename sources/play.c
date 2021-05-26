@@ -121,10 +121,10 @@ void makePlayAddColumn(gameInfo *info) {
 
 void showPreviousTurns(gameInfo *info) {
     gameInfo *infoAux = info;
-    int turns = 2;
+    int turns;
 
     printf("Introduza quantas jogadas pretende rever:\n");
-    //scanf("%d", &turns);
+    turns = checkInt(1, info->turn);
 
     for (int i = 0; i < turns; ++i) {
         printf("entrou no for de rever turnos!\n");
@@ -135,11 +135,10 @@ void showPreviousTurns(gameInfo *info) {
             break;
         }
 
-        showPreviousTurns(infoAux);
-
         printf("Vez do jogador %c\nTurno: %d\n", infoAux->player, infoAux->turn);
 
-        printBoard(infoAux);
+        printBoardToConsole(infoAux);
     }
+
     info->validPlay = 0;
 }

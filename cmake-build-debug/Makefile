@@ -196,6 +196,33 @@ sources/boardAlloc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/boardAlloc.c.s
 .PHONY : sources/boardAlloc.c.s
 
+sources/files.o: sources/files.c.o
+
+.PHONY : sources/files.o
+
+# target to build an object file
+sources/files.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/files.c.o
+.PHONY : sources/files.c.o
+
+sources/files.i: sources/files.c.i
+
+.PHONY : sources/files.i
+
+# target to preprocess a source file
+sources/files.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/files.c.i
+.PHONY : sources/files.c.i
+
+sources/files.s: sources/files.c.s
+
+.PHONY : sources/files.s
+
+# target to generate assembly for a file
+sources/files.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/files.c.s
+.PHONY : sources/files.c.s
+
 sources/game.o: sources/game.c.o
 
 .PHONY : sources/game.o
@@ -373,6 +400,9 @@ help:
 	@echo "... sources/boardAlloc.o"
 	@echo "... sources/boardAlloc.i"
 	@echo "... sources/boardAlloc.s"
+	@echo "... sources/files.o"
+	@echo "... sources/files.i"
+	@echo "... sources/files.s"
 	@echo "... sources/game.o"
 	@echo "... sources/game.i"
 	@echo "... sources/game.s"

@@ -11,12 +11,18 @@ CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o: ../headers/game.h
 CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o: ../headers/utils.h
 CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o: ../sources/boardAlloc.c
 
+CMakeFiles/semaforotp.dir/sources/files.c.o: ../headers/board.h
+CMakeFiles/semaforotp.dir/sources/files.c.o: ../headers/game.h
+CMakeFiles/semaforotp.dir/sources/files.c.o: ../headers/utils.h
+CMakeFiles/semaforotp.dir/sources/files.c.o: ../sources/files.c
+
 CMakeFiles/semaforotp.dir/sources/game.c.o: ../headers/board.h
 CMakeFiles/semaforotp.dir/sources/game.c.o: ../headers/game.h
 CMakeFiles/semaforotp.dir/sources/game.c.o: ../headers/utils.h
 CMakeFiles/semaforotp.dir/sources/game.c.o: ../sources/game.c
 
 CMakeFiles/semaforotp.dir/sources/main.c.o: ../headers/board.h
+CMakeFiles/semaforotp.dir/sources/main.c.o: ../headers/files.h
 CMakeFiles/semaforotp.dir/sources/main.c.o: ../headers/game.h
 CMakeFiles/semaforotp.dir/sources/main.c.o: ../headers/menu.h
 CMakeFiles/semaforotp.dir/sources/main.c.o: ../headers/utils.h

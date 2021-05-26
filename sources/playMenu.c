@@ -32,7 +32,12 @@ void displayTurnsMenu(gameInfo *info) {
             makePlayAddColumn(info);
             break;
         case 5:
-            showPreviousTurns(info);
+            if(info->turn == 1){
+                printf("Ainda não existem jogadas para rever!\nSelecione uma jogada válida!\n");
+                info->validPlay = 0;
+            } else{
+                showPreviousTurns(info);
+            }
             break;
         default:
             break;

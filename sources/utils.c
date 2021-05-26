@@ -46,6 +46,24 @@ int checkInt(int min, int max) {
     return option;
 }
 
+void reverse(gameInfo** info){
+    gameInfo* prev = NULL;
+    gameInfo* current = *info;
+    gameInfo* next = NULL;
+    while (current != NULL) {
+        // Store next
+        next = current->nextTurns;
+
+        // Reverse current node's pointer
+        current->nextTurns = prev;
+
+        // Move pointers one position ahead.
+        prev = current;
+        current = next;
+    }
+    *info = prev;
+}
+
 //Invalida a alocação de memória da estrutura
 void checkAllocMemory(gameInfo *info) {
     if (info == NULL) {

@@ -10,6 +10,7 @@
 #include "../headers/utils.h"
 #include "../headers/board.h"
 #include "../headers/menu.h"
+#include "../headers/files.h"
 
 int main() {
     initRandom();
@@ -35,7 +36,7 @@ int main() {
         //Jogo Jogador vs Jogador
         while (info->gameType == 1) {
             do {
-                printBoard(info);
+                printBoardToConsole(info);
                 displayTurnsMenu(info);
             } while (info->validPlay != 1);
 
@@ -51,8 +52,9 @@ int main() {
                 }
                 ++info->turn;
             } else {
-                printBoard(info);
+                printBoardToConsole(info);
                 printf("Parabéns jogador %c, ganhou o jogo!\n", info->player);
+                saveGameTurns(info);
                 newGame(info);
                 cleanBoardAlloc(info);
             }
@@ -63,8 +65,6 @@ int main() {
 
         }
     } while (info->gameType == 0);
-
-    printf("Obrigado por jogar!");
 
     return 0;
 }
