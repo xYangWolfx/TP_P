@@ -79,7 +79,7 @@ void saveCurrentGame(gameInfo *info){
 
     for (int i = 0; i < info->size[0]; ++i) {
         for (int j = 0; j < info->size[1]; ++j) {
-            fwrite(&info->board[i][j], sizeof(&info->board[i][j]), 1, save);
+            fwrite(&info->board[i][j], sizeof(info->board[i][j]), 1, save);
         }
     }
     fclose(save);
@@ -119,7 +119,7 @@ void resumeLastGame(gameInfo *info){
     }
 
     boardAlloc(info);
-    //populateBoard(info);
+    populateBoard(info);
 
     for (int i = 0; i < info->size[0]; ++i) {
         for (int j = 0; j < info->size[1]; ++j) {
