@@ -4,7 +4,6 @@
 
 #include "../headers/game.h"
 #include "../headers/utils.h"
-#include "../headers/play.h"
 #include "../headers/autoBot.h"
 
 void autoPlay(gameInfo *info, coordinates *play) {
