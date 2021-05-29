@@ -1,5 +1,7 @@
 //
-// Created by miguel on 5/29/21.
+// Created by Miguel Ferreira
+// Nº: 2020107016
+// on 5/29/21.
 //
 
 #include <stdio.h>
