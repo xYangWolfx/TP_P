@@ -16,6 +16,8 @@ void displayTurnsMenu(gameInfo *info, coordinates *play);
 //Dar opção ao utilizador de jogar um novo jogo ou sair da aplicação
 void newGame(gameInfo *info);
 
+//Dar opção ao jogador de resumir o último jogo interrompido caso
+// seja detetado um ficheiro binário
 void resumeLastGame(gameInfo *info);
 
 #endif //SEMAFOROTP_MENU_H

@@ -20,8 +20,12 @@ void boardAlloc(struct gameInfo *info) {
     }
 }
 
+//Realocação de memória para a jogada de adicionar nova linha ao tabuleiro
 void boardLineRealloc(gameInfo *info) {
-    int **boardAux = realloc(info->board, sizeof(int *) * ++(info->size[0]));
+    //Aumentar o número de linhas
+    ++info->size[0];
+
+    int **boardAux = realloc(info->board, sizeof(int *) * (info->size[0]));
     checkAllocMemoryAux(boardAux);
 
     boardAux[info->size[0] - 1] = malloc(sizeof(int) * info->size[1]);
@@ -34,9 +38,12 @@ void boardLineRealloc(gameInfo *info) {
     info->board=boardAux;
 }
 
+//Realocação de memória para a jogada de adicionar nova coluna ao tabuleiro
 void boardColumnRealloc(gameInfo *info) {
     int **boardAux = info->board;
     checkAllocMemoryAux(boardAux);
+
+    //Aumentar o número de colunas
     ++info->size[1];
 
     for (int i = 0; i < info->size[0]; i++) {
@@ -51,6 +58,7 @@ void boardColumnRealloc(gameInfo *info) {
     info->board = boardAux;
 }
 
+//Limpeza da memória alocada ao tabuleiro, no final do jogo
 void cleanBoardAlloc(gameInfo *info) {
     checkBoardAllocMemory(info, 0);
 

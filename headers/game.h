@@ -42,7 +42,7 @@ struct gameInfo {
     struct gameInfo *nextTurns;
 };
 
-//estutura para guardar as coordenadas do tabuleiro inseridas pelo utilizador
+//Estrutura para guardar as coordenadas do tabuleiro inseridas pelo utilizador
 typedef struct coordinates coordinates;
 
 struct coordinates {
@@ -50,12 +50,17 @@ struct coordinates {
     int columns;
 };
 
+//Preenche o conteúdo da estrutura no início de um novo jogo
 void setInfo(gameInfo *info);
 
+//Função para alterar o jogagor no final de cada turno
 void changePlayer(gameInfo *info);
 
+//Função para gravar o estado do tabuleiro, turno e jogador
+// para consulta de jogadas anteriores
 void saveTurns(gameInfo **info);
 
+//Função para verificar se algum jogador ganhou no final de cada turno
 void isWinner(gameInfo *info);
 
 #endif //SEMAFOROTP_GAME_H

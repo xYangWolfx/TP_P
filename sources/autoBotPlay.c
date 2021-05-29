@@ -4,8 +4,6 @@
 // on 5/29/21.
 //
 
-#include <stdio.h>
-
 #include "../headers/game.h"
 #include "../headers/board.h"
 

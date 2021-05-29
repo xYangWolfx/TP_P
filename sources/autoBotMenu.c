@@ -8,8 +8,12 @@
 #include "../headers/utils.h"
 #include "../headers/autoBot.h"
 
+//De forma aleatória gera os valores para selecionar a jogada do bot
+//e as coordenadas do tabuleiro para posicionar peças
 void autoPlay(gameInfo *info, coordinates *play) {
     int moveChoice;
+
+    //Jogada é sempre válida até alguma verificação detetar o contrário
     info->validPlay=1;
 
     printf("Vez do jogador %c (Computador)\nTurno: %d\n", info->player, info->turn);

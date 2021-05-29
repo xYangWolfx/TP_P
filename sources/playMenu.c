@@ -12,6 +12,8 @@
 
 void displayTurnsMenu(gameInfo *info, coordinates *play) {
     int choice;
+
+    //Jogada é sempre válida até alguma verificação detetar o contrário
     info->validPlay = 1;
 
     printf("Vez do jogador %c\nTurno: %d\nSelecione a sua jogada:\n 1- Colocar cor\n 2- Colocar pedra\n 3- Inserir nova linha"

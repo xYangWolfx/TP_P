@@ -12,6 +12,9 @@
 #include "game.h"
 #include "utils.h"
 
+//Funções do ficheiro "boardAlloc.c"
+//Gerar de forma aleatória o tamanho das linhas
+// e das colunas do tabuleiro
 void randomizeBoard(gameInfo *info);
 
 //Alocação da memória para o tabuleiro inicial
@@ -26,6 +29,7 @@ void boardColumnRealloc(gameInfo *info);
 //Limpeza da memória alocada ao tabuleiro, no final do jogo
 void cleanBoardAlloc(gameInfo *info);
 
+//Funções do ficheiro "board.c"
 //Preechimento do tabuleiro com os valores iniciais
 void populateBoard(gameInfo *info);
 
