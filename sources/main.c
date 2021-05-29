@@ -84,6 +84,5 @@ int main() {
             }
         }
     } while (info->gameType == 0);
-
     return 0;
 }

@@ -7,12 +7,15 @@
 #include "../headers/play.h"
 #include "../headers/autoBot.h"
 
-void autoPlay(gameInfo *info, coordinates *play){
+void autoPlay(gameInfo *info, coordinates *play) {
     int moveChoice;
 
     moveChoice = intUniformRnd(1, 4);
-    play->lines = intUniformRnd(1, info->size[0]);
-    play->columns = intUniformRnd(1, info->size[1]);
+
+    if (moveChoice == 1 || moveChoice == 2) {
+        play->lines = intUniformRnd(1, info->size[0]);
+        play->columns = intUniformRnd(1, info->size[1]);
+    }
 
     switch (moveChoice) {
         case 1:
