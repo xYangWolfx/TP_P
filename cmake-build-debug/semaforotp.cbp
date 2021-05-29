@@ -76,6 +76,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/headers/autoBot.h">
+			<Option target="semaforotp"/>
+		</Unit>
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/headers/board.h">
 			<Option target="semaforotp"/>
 		</Unit>
@@ -92,6 +95,12 @@
 			<Option target="semaforotp"/>
 		</Unit>
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/headers/utils.h">
+			<Option target="semaforotp"/>
+		</Unit>
+		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/sources/autoBotMenu.c">
+			<Option target="semaforotp"/>
+		</Unit>
+		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/sources/autoBotPlay.c">
 			<Option target="semaforotp"/>
 		</Unit>
 		<Unit filename="/home/miguel/CLionProjects/tpSemaforo/sources/board.c">

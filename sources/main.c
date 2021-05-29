@@ -11,6 +11,7 @@
 #include "../headers/board.h"
 #include "../headers/menu.h"
 #include "../headers/files.h"
+#include "../headers/autoBot.h"
 
 int main() {
     initRandom();
@@ -45,12 +46,7 @@ int main() {
             isWinner(info);
 
             if (info->winner == 0 && info->gameType == 1) {
-                if (info->player == 'A') {
-                    info->player = 'B';
-                } else if (info->player == 'B') {
-                    info->player = 'A';
-                }
-                ++info->turn;
+                changePlayer(info);
             } else if (info->winner == 1 && info->gameType == 1){
                 printBoardToConsole(info);
                 printf("Parabéns jogador %c, ganhou o jogo!\n", info->player);
@@ -62,7 +58,30 @@ int main() {
 
         //Jogo Jogador vs Computador
         while (info->gameType == 2) {
+            if (info->player == 'A'){
+                do {
+                    printBoardToConsole(info);
+                    displayTurnsMenu(info, play);
+                } while (info->validPlay != 1);
+            } else if (info->player == 'B'){
+                do {
+                    autoPlay(info, play);
+                } while (info->validPlay != 1);
+            }
 
+            saveTurns(info);
+
+            isWinner(info);
+
+            if (info->winner == 0 && info->gameType == 1) {
+                changePlayer(info);
+            } else if (info->winner == 1 && info->gameType == 1){
+                printBoardToConsole(info);
+                printf("Parabéns jogador %c, ganhou o jogo!\n", info->player);
+                saveGameToTxt(info);
+                newGame(info);
+                cleanBoardAlloc(info);
+            }
         }
     } while (info->gameType == 0);
 

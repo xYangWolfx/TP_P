@@ -142,6 +142,60 @@ semaforotp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/build
 .PHONY : semaforotp/fast
 
+sources/autoBotMenu.o: sources/autoBotMenu.c.o
+
+.PHONY : sources/autoBotMenu.o
+
+# target to build an object file
+sources/autoBotMenu.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/autoBotMenu.c.o
+.PHONY : sources/autoBotMenu.c.o
+
+sources/autoBotMenu.i: sources/autoBotMenu.c.i
+
+.PHONY : sources/autoBotMenu.i
+
+# target to preprocess a source file
+sources/autoBotMenu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/autoBotMenu.c.i
+.PHONY : sources/autoBotMenu.c.i
+
+sources/autoBotMenu.s: sources/autoBotMenu.c.s
+
+.PHONY : sources/autoBotMenu.s
+
+# target to generate assembly for a file
+sources/autoBotMenu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/autoBotMenu.c.s
+.PHONY : sources/autoBotMenu.c.s
+
+sources/autoBotPlay.o: sources/autoBotPlay.c.o
+
+.PHONY : sources/autoBotPlay.o
+
+# target to build an object file
+sources/autoBotPlay.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/autoBotPlay.c.o
+.PHONY : sources/autoBotPlay.c.o
+
+sources/autoBotPlay.i: sources/autoBotPlay.c.i
+
+.PHONY : sources/autoBotPlay.i
+
+# target to preprocess a source file
+sources/autoBotPlay.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/autoBotPlay.c.i
+.PHONY : sources/autoBotPlay.c.i
+
+sources/autoBotPlay.s: sources/autoBotPlay.c.s
+
+.PHONY : sources/autoBotPlay.s
+
+# target to generate assembly for a file
+sources/autoBotPlay.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/semaforotp.dir/build.make CMakeFiles/semaforotp.dir/sources/autoBotPlay.c.s
+.PHONY : sources/autoBotPlay.c.s
+
 sources/board.o: sources/board.c.o
 
 .PHONY : sources/board.o
@@ -394,6 +448,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... semaforotp"
+	@echo "... sources/autoBotMenu.o"
+	@echo "... sources/autoBotMenu.i"
+	@echo "... sources/autoBotMenu.s"
+	@echo "... sources/autoBotPlay.o"
+	@echo "... sources/autoBotPlay.i"
+	@echo "... sources/autoBotPlay.s"
 	@echo "... sources/board.o"
 	@echo "... sources/board.i"
 	@echo "... sources/board.s"

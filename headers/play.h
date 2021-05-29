@@ -10,6 +10,9 @@
 
 //Realização de jogadas
 
+//Pedir ao utilizador linhas e colunas para colocar peças
+void askPosition(gameInfo *info, coordinates *play);
+
 //Realiza a jogada de inserir/alterar cores do tabuleiro
 void makePlayChangeColor(gameInfo *info, coordinates *play);
 

@@ -23,6 +23,15 @@ void setInfo(gameInfo *info) {
     info->winner = 0;
 }
 
+void changePlayer(gameInfo *info){
+    if (info->player == 'A') {
+        info->player = 'B';
+    } else if (info->player == 'B') {
+        info->player = 'A';
+    }
+    ++info->turn;
+}
+
 void saveTurns(gameInfo **info) {
     gameInfo *infoAux = (gameInfo *) malloc(sizeof(gameInfo));
 

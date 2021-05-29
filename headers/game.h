@@ -42,7 +42,7 @@ struct gameInfo {
     struct gameInfo *nextTurns;
 };
 
-
+//estutura para guardar as coordenadas do tabuleiro inseridas pelo utilizador
 typedef struct coordinates coordinates;
 
 struct coordinates {
@@ -51,6 +51,8 @@ struct coordinates {
 };
 
 void setInfo(gameInfo *info);
+
+void changePlayer(gameInfo *info);
 
 void saveTurns(gameInfo **info);
 

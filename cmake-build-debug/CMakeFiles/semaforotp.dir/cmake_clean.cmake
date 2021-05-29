@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/semaforotp.dir/sources/autoBotMenu.c.o"
+  "CMakeFiles/semaforotp.dir/sources/autoBotPlay.c.o"
   "CMakeFiles/semaforotp.dir/sources/board.c.o"
   "CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o"
   "CMakeFiles/semaforotp.dir/sources/files.c.o"

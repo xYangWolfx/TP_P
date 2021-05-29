@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/miguel/CLionProjects/tpSemaforo/sources/autoBotMenu.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/autoBotMenu.c.o"
+  "/home/miguel/CLionProjects/tpSemaforo/sources/autoBotPlay.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/autoBotPlay.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/board.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/board.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/boardAlloc.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/boardAlloc.c.o"
   "/home/miguel/CLionProjects/tpSemaforo/sources/files.c" "/home/miguel/CLionProjects/tpSemaforo/cmake-build-debug/CMakeFiles/semaforotp.dir/sources/files.c.o"

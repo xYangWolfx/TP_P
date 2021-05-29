@@ -5,7 +5,6 @@
 //
 
 #include <stdio.h>
-#include <malloc.h>
 
 #include "../headers/play.h"
 #include "../headers/board.h"
@@ -19,8 +18,6 @@ void askPosition(gameInfo *info, coordinates *play){
 }
 
 void makePlayChangeColor(gameInfo *info, coordinates *play) {
-    askPosition(info, play);
-
     if (info->board[play->lines - 1][play->columns - 1] == 0) {
         info->board[play->lines - 1][play->columns - 1] = 1;
     } else if (info->board[play->lines - 1][play->columns - 1] == 1) {
@@ -40,8 +37,6 @@ void makePlayChangeColor(gameInfo *info, coordinates *play) {
 
 void makePlayPutStone(gameInfo *info, coordinates *play) {
     if (info->player == 'A' && info->stone[0] < 1) {
-        askPosition(info, play);
-
         if (info->board[play->lines - 1][play->columns - 1] != 0) {
             printf("Não pode colocar uma pedra numa posição já ocupada!\nJogada não é válida!\nPor favor insira nova posição!\n");
             info->validPlay = 0;
@@ -50,8 +45,6 @@ void makePlayPutStone(gameInfo *info, coordinates *play) {
             ++info->stone[0];
         }
     } else if (info->player == 'B' && info->stone[1] < 1) {
-        askPosition(info, play);
-
         if (info->board[play->lines - 1][play->columns - 1] != 0) {
             printf("Não pode colocar uma pedra numa posição já ocupada!\nJogada não é válida!\nPor favor insira nova posição!\n");
             info->validPlay = 0;
