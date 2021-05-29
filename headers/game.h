@@ -42,6 +42,14 @@ struct gameInfo {
     struct gameInfo *nextTurns;
 };
 
+
+typedef struct coordinates coordinates;
+
+struct coordinates {
+    int lines;
+    int columns;
+};
+
 void setInfo(gameInfo *info);
 
 void saveTurns(gameInfo **info);

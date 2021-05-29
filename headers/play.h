@@ -11,10 +11,10 @@
 //Realização de jogadas
 
 //Realiza a jogada de inserir/alterar cores do tabuleiro
-void makePlayChangeColor(gameInfo *info);
+void makePlayChangeColor(gameInfo *info, coordinates *play);
 
 //Realiza a jogada de colocar a pedra no tabuleiro
-void makePlayPutStone(gameInfo *info);
+void makePlayPutStone(gameInfo *info, coordinates *play);
 
 //Realiza a jogada de inserir uma nova linha no tabuleiro
 void makePlayAddLine(gameInfo *info);

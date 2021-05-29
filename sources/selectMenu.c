@@ -8,6 +8,8 @@
 
 #include "../headers/game.h"
 #include "../headers/utils.h"
+#include "../headers/files.h"
+#include "../headers/board.h"
 
 void displayPlayMenu(gameInfo *info) {
     int gameType;
@@ -75,13 +77,32 @@ void newGame(gameInfo *info) {
     int choice;
 
     printf("Pretende iniciar um novo jogo?\n  1- Sim (Voltar ao menu principal)\n  2- Não (Sair da aplicação)\n");
-
     choice = checkInt(1, 2);
 
-    if (choice == 1) {
-        info->gameType = 0;
-    } else {
-        printf("Obrigado por jogar!");
-        info->gameType = 3;
+    switch (choice) {
+        case 1:
+            info->gameType = 0;
+            break;
+        case 2:
+            printf("Obrigado por jogar!");
+            info->gameType = 3;
+            break;
+    }
+}
+
+void resumeLastGame(gameInfo *info){
+    int choice;
+
+    printf("O jogo anterior foi interrompido.\n Pretende resumir esse jogo?\n 1- Sim\n 2- Não (Voltar ao menu principal)\n");
+    choice = checkInt(1, 2);
+
+    switch (choice) {
+        case 1:
+            printf("A resumir jogo anterior!\n");
+            resumeLastGameFromBin(info);
+            break;
+        case 2:
+            randomizeBoard(info);
+            break;
     }
 }

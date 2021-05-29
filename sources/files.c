@@ -7,22 +7,22 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <malloc.h>
 
 #include "../headers/game.h"
 #include "../headers/utils.h"
 #include "../headers/board.h"
 
-int checkIfFileExists(){
-    if (access("../saves/savegame.bin", F_OK) != -1){
+int checkIfFileExists() {
+    if (access("../saves/savegame.bin", F_OK) != -1) {
         return 1;
-    } else{
+    } else {
         return 0;
     }
 }
 
-void saveGameTurns(gameInfo *info){
+void saveGameToTxt(gameInfo *info) {
     gameInfo *infoAux = info;
-
     FILE *save;
     char fileName[100], directory[250];
 
@@ -30,38 +30,31 @@ void saveGameTurns(gameInfo *info){
     scanf("%s", &fileName);
 
     snprintf(directory, sizeof(directory), "../saves/%s.txt", fileName);
-
     save = fopen(directory, "w");
-
     checkFiles(save);
-
     reverse(&infoAux);
 
-    while (infoAux->nextTurns != NULL){
-        fprintf(save,"Vez do jogador %c\nTurno: %d\n", infoAux->player, infoAux->turn);
-
+    while (infoAux->nextTurns != NULL) {
+        fprintf(save, "Vez do jogador %c\nTurno: %d\n", infoAux->player, infoAux->turn);
         printBoardToFile(infoAux, save);
-
         infoAux = infoAux->nextTurns;
     }
-
     fclose(save);
 }
 
-void saveCurrentGame(gameInfo *info){
+void saveCurrentGameToBin(gameInfo *info) {
     FILE *save;
-    int player;
-
+    int player, cnt = 0;
     info->gameType = 1;
 
     save = fopen("../saves/savegame.bin", "wb");
-
     checkFiles(save);
 
-    if (info->player == 'A'){
+    //while (info->nextTurns != NULL) {
+    if (info->player == 'A') {
         player = 0;
         fwrite(&player, sizeof(player), 1, save);
-    } else if (info->player == 'B'){
+    } else if (info->player == 'B') {
         player = 1;
         fwrite(&player, sizeof(player), 1, save);
     }
@@ -82,21 +75,21 @@ void saveCurrentGame(gameInfo *info){
             fwrite(&info->board[i][j], sizeof(info->board[i][j]), 1, save);
         }
     }
+    printf("Gravou %d listas ligadas!!!!", cnt);
     fclose(save);
 }
 
-void resumeLastGame(gameInfo *info){
+void resumeLastGameFromBin(gameInfo *info) {
     FILE *save;
-    int game;
+    int game, cnt = 0;
 
     save = fopen("../saves/savegame.bin", "rb");
-
     checkFiles(save);
 
     fread(&game, sizeof(int), 1, save);
-    if (game == 0){
+    if (game == 0) {
         info->player = 'A';
-    } else if (game == 1){
+    } else if (game == 1) {
         info->player = 'B';
     }
 
@@ -127,5 +120,6 @@ void resumeLastGame(gameInfo *info){
             info->board[i][j] = game;
         }
     }
+    printf("read %d items ok\n", cnt);
     fclose(save);
 }

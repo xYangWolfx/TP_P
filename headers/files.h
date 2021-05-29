@@ -9,10 +9,10 @@
 
 int checkIfFileExists();
 
-void saveGameTurns(gameInfo *info);
+void saveGameToTxt(gameInfo *info);
 
-void saveCurrentGame(gameInfo *info);
+void saveCurrentGameToBin(gameInfo *info);
 
-void resumeLastGame(gameInfo *info);
+void resumeLastGameFromBin(gameInfo *info);
 
 #endif //SEMAFOROTP_FILES_H

@@ -8,6 +8,17 @@
 
 #include "../headers/board.h"
 
+void randomizeBoard(gameInfo *info) {
+    int temp;
+    temp = intUniformRnd(3, 5);
+
+    info->size[0] = temp;
+    info->size[1] = temp;
+
+    boardAlloc(info);
+    populateBoard(info);
+}
+
 void populateBoard(gameInfo *info) {
     for (int i = 0; i < info->size[0]; ++i) {
         for (int j = 0; j < info->size[1]; ++j) {
@@ -28,17 +39,13 @@ void printBoardToConsole(gameInfo *info) {
         for (int j = 0; j < info->size[1]; j++) {
             if (info->board[i][j] == 0) {
                 printf(" - ");
-            }
-            if (info->board[i][j] == 1) {
+            } else if (info->board[i][j] == 1) {
                 printf(" G ");
-            }
-            if (info->board[i][j] == 2) {
+            } else if (info->board[i][j] == 2) {
                 printf(" Y ");
-            }
-            if (info->board[i][j] == 3) {
+            } else if (info->board[i][j] == 3) {
                 printf(" R ");
-            }
-            if (info->board[i][j] == 4) {
+            } else {
                 printf(" X ");
             }
         }
@@ -58,17 +65,13 @@ void printBoardToFile(gameInfo *info, FILE *file) {
         for (int j = 0; j < info->size[1]; j++) {
             if (info->board[i][j] == 0) {
                 fprintf(file, " - ");
-            }
-            if (info->board[i][j] == 1) {
+            } else if (info->board[i][j] == 1) {
                 fprintf(file, " G ");
-            }
-            if (info->board[i][j] == 2) {
+            } else if (info->board[i][j] == 2) {
                 fprintf(file, " Y ");
-            }
-            if (info->board[i][j] == 3) {
+            } else if (info->board[i][j] == 3) {
                 fprintf(file, " R ");
-            }
-            if (info->board[i][j] == 4) {
+            } else {
                 fprintf(file, " X ");
             }
         }

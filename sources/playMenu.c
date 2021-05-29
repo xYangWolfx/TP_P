@@ -10,7 +10,7 @@
 #include "../headers/utils.h"
 #include "../headers/files.h"
 
-void displayTurnsMenu(gameInfo *info) {
+void displayTurnsMenu(gameInfo *info, coordinates *play) {
     int choice;
     info->validPlay = 1;
 
@@ -21,10 +21,10 @@ void displayTurnsMenu(gameInfo *info) {
 
     switch (choice) {
         case 1:
-            makePlayChangeColor(info);
+            makePlayChangeColor(info, play);
             break;
         case 2:
-            makePlayPutStone(info);
+            makePlayPutStone(info, play);
             break;
         case 3:
             makePlayAddLine(info);
@@ -41,7 +41,7 @@ void displayTurnsMenu(gameInfo *info) {
             }
             break;
         case 6:
-            saveCurrentGame(info);
+            saveCurrentGameToBin(info);
             info->gameType = 3;
             break;
     }

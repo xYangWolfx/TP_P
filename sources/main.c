@@ -15,24 +15,18 @@
 int main() {
     initRandom();
     gameInfo *info = (gameInfo *) malloc(sizeof(gameInfo));
+    coordinates *play=(coordinates *) malloc(sizeof(coordinates));
 
     checkAllocMemory(info);
 
     do {
         setInfo(info);
-        int temp;
-        temp = checkIfFileExists();
+        int check = checkIfFileExists();
 
-        if (temp == 1){
-            printf("Ficheiro encontrado\n");
+        if (check == 1){
             resumeLastGame(info);
-        } else{
-            temp = intUniformRnd(3, 5);
-            info->size[0] = temp;
-            info->size[1] = temp;
-
-            boardAlloc(info);
-            populateBoard(info);
+        } else if (check == 0){
+            randomizeBoard(info);
         }
 
         while (info->gameType == 0) {
@@ -43,7 +37,7 @@ int main() {
         while (info->gameType == 1) {
             do {
                 printBoardToConsole(info);
-                displayTurnsMenu(info);
+                displayTurnsMenu(info, play);
             } while (info->validPlay != 1);
 
             saveTurns(&info);
@@ -60,7 +54,7 @@ int main() {
             } else if (info->winner == 1 && info->gameType == 1){
                 printBoardToConsole(info);
                 printf("Parabéns jogador %c, ganhou o jogo!\n", info->player);
-                saveGameTurns(info);
+                saveGameToTxt(info);
                 newGame(info);
                 cleanBoardAlloc(info);
             }

@@ -12,6 +12,8 @@
 #include "game.h"
 #include "utils.h"
 
+void randomizeBoard(gameInfo *info);
+
 //Alocação da memória para o tabuleiro inicial
 void boardAlloc(gameInfo *info);
 
