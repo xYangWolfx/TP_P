@@ -34,6 +34,12 @@ void saveGameToTxt(gameInfo *info) {
     checkFiles(save);
     reverse(&infoAux);
 
+    if (info->gameType == 1){
+        fprintf(save, "Jogador vs Jogador");
+    } else{
+        fprintf(save, "Jogador vs Computador");
+    }
+
     while (infoAux->nextTurns != NULL) {
         fprintf(save, "Vez do jogador %c\nTurno: %d\n", infoAux->player, infoAux->turn);
         printBoardToFile(infoAux, save);

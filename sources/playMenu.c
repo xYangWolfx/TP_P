@@ -21,11 +21,9 @@ void displayTurnsMenu(gameInfo *info, coordinates *play) {
 
     switch (choice) {
         case 1:
-            askPosition(info, play);
             makePlayChangeColor(info, play);
             break;
         case 2:
-            askPosition(info, play);
             makePlayPutStone(info, play);
             break;
         case 3:

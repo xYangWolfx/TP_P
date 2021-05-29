@@ -7,6 +7,8 @@
 #ifndef SEMAFOROTP_UTILS_H
 #define SEMAFOROTP_UTILS_H
 
+#include <stdio.h>
+
 #include "game.h"
 
 // Inicializa o gerador de numeros aleatorios.

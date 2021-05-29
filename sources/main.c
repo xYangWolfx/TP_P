@@ -69,13 +69,13 @@ int main() {
                 } while (info->validPlay != 1);
             }
 
-            saveTurns(info);
+            saveTurns(&info);
 
             isWinner(info);
 
-            if (info->winner == 0 && info->gameType == 1) {
+            if (info->winner == 0 && info->gameType == 2) {
                 changePlayer(info);
-            } else if (info->winner == 1 && info->gameType == 1){
+            } else if (info->winner == 1 && info->gameType == 2){
                 printBoardToConsole(info);
                 printf("Parabéns jogador %c, ganhou o jogo!\n", info->player);
                 saveGameToTxt(info);
