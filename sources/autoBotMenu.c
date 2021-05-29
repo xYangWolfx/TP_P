@@ -8,6 +8,9 @@
 
 void autoPlay(gameInfo *info, coordinates *play) {
     int moveChoice;
+    info->validPlay=1;
+
+    printf("Vez do jogador %c (Computador)\nTurno: %d\n", info->player, info->turn);
 
     moveChoice = intUniformRnd(1, 4);
 

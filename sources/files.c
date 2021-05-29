@@ -56,7 +56,6 @@ void saveCurrentGameToBin(gameInfo *info) {
     save = fopen("../saves/savegame.bin", "wb");
     checkFiles(save);
 
-    //while (info->nextTurns != NULL) {
     if (info->player == 'A') {
         player = 0;
         fwrite(&player, sizeof(player), 1, save);
@@ -81,7 +80,6 @@ void saveCurrentGameToBin(gameInfo *info) {
             fwrite(&info->board[i][j], sizeof(info->board[i][j]), 1, save);
         }
     }
-    printf("Gravou %d listas ligadas!!!!", cnt);
     fclose(save);
 }
 
@@ -126,6 +124,5 @@ void resumeLastGameFromBin(gameInfo *info) {
             info->board[i][j] = game;
         }
     }
-    printf("read %d items ok\n", cnt);
     fclose(save);
 }

@@ -65,6 +65,7 @@ int main() {
                 } while (info->validPlay != 1);
             } else if (info->player == 'B'){
                 do {
+                    printBoardToConsole(info);
                     autoPlay(info, play);
                 } while (info->validPlay != 1);
             }
