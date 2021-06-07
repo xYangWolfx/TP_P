@@ -15,7 +15,7 @@ void displayPlayMenu(gameInfo *info) {
     int gameType;
 
     printf("Que tipo de jogo pretende?\n");
-    printf("  1- Jogador vs Jogador\n  2- Jogador vs Computador\n  3- Voltar ao menuprincipal\n");
+    printf("  1- Jogador vs Jogador\n  2- Jogador vs Computador\n  3- Voltar ao menu principal\n");
 
     gameType = checkInt(1, 3);
 
