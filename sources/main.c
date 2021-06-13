@@ -16,7 +16,7 @@
 int main() {
     initRandom();
     gameInfo *info = (gameInfo *) malloc(sizeof(gameInfo));
-    coordinates *play=(coordinates *) malloc(sizeof(coordinates));
+    coordinates *play;
 
     checkAllocMemory(info);
 
