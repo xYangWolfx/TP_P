@@ -16,6 +16,7 @@
 int main() {
     initRandom();
     gameInfo *info = (gameInfo *) malloc(sizeof(gameInfo));
+    gameInfo *infoAux;
     coordinates *play;
 
     checkAllocMemory(info);
@@ -85,5 +86,12 @@ int main() {
             }
         }
     } while (info->gameType == 0);
+
+    while (info != NULL){
+        infoAux = info;
+        info = info->nextTurns;
+        free(infoAux);
+    }
+
     return 0;
 }
