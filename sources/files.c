@@ -52,7 +52,6 @@ void saveCurrentGameToBin(gameInfo *info) {
     FILE *save;
     int player, gameType;
     gameInfo *infoAux = info;
-    info->gameType = 1;
 
     save = fopen("../saves/savegame.bin", "wb");
     checkFiles(save);
