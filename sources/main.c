@@ -53,7 +53,6 @@ int main() {
                 printf("Parabéns jogador %c, ganhou o jogo!\n", info->player);
                 saveGameToTxt(info);
                 newGame(info);
-                cleanBoardAlloc(info);
             }
         }
 
@@ -82,14 +81,18 @@ int main() {
                 printf("Parabéns jogador %c, ganhou o jogo!\n", info->player);
                 saveGameToTxt(info);
                 newGame(info);
-                cleanBoardAlloc(info);
             }
+        }
+
+        if (info->gameType == 0){
+            cleanBoardAlloc(info);
         }
     } while (info->gameType == 0);
 
     while (info != NULL){
         infoAux = info;
         info = info->nextTurns;
+        cleanBoardAlloc(infoAux);
         free(infoAux);
     }
 
