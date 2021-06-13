@@ -93,12 +93,13 @@ void showPreviousTurns(gameInfo *info) {
     int turns;
 
     printf("Introduza quantas jogadas pretende rever:\n");
-    turns = checkInt(1, info->turn-1);
+    turns = checkInt(1, info->turn);
 
     for (int i = 0; i < turns; ++i) {
         infoAux = infoAux->nextTurns;
 
         if (infoAux == NULL) {
+            printf("infoAux esta null!\n");
             break;
         }
 
