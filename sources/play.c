@@ -95,8 +95,6 @@ void showPreviousTurns(gameInfo *info) {
     printf("Introduza quantas jogadas pretende rever:\n");
     turns = checkInt(1, info->turn-1);
 
-    //reverse(&infoAux);
-
     for (int i = 0; i < turns; ++i) {
         infoAux = infoAux->nextTurns;
 
@@ -109,8 +107,6 @@ void showPreviousTurns(gameInfo *info) {
     }
 
     printf("----------------\n  Jogada atual\n----------------\n");
-
-    //reverse(&infoAux);
 
     info->validPlay = 0;
 }
